@@ -1,0 +1,27 @@
+.button {
+  padding: 14px;
+  display: inline-block;
+  font-family: "Roboto Condensed", "Arial" sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+}
+
+.button--color {
+  background-color: #00B2FF;
+  color: #ffffff;
+  border: none;
+}
+
+.button--size-big {
+  font-size: 16px;
+  line-height: 19px;
+}
