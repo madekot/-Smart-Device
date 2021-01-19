@@ -1,17 +1,22 @@
 .header {
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 33px;
   padding-bottom: 90px;
-  background-color: #1B2D37;
+
+  color: #ffffff;
+  background-color: #1b2d37;
   background-image: url("../img/chip-desktop@1x.png"),
   url("../img/bg-header-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top 258px right 177px,
+  background-position: top 258px right 9.218%,
   center top;
-  color: #ffffff;
 }
 
 .header__content {
   position: relative;
+
   padding-bottom: 200px;
 }
 
@@ -21,14 +26,14 @@
 }
 
 .header__nav {
-  flex-grow: 1;
   display: flex;
+  flex-grow: 1;
 }
 
 .site-list__button {
-  margin-left: 38px;
   min-width: 180px;
   min-height: 45px;
+  margin-left: 38px;
 }
 
 .header__logo {
@@ -37,29 +42,30 @@
 }
 
 .header__site-list {
-  padding-top: 14px;
-  margin-left: auto;
   min-width: 440px;
+  margin-left: auto;
+  padding-top: 14px;
 }
 
 .header__wrap-bottom {
-  margin-top: 230px;
   max-width: 718px;
+  margin-top: 230px;
   // padding-right: 45%;
 }
 
 .header__link {
   position: absolute;
-  left: -17px;
   bottom: 36px;
+  left: -17px;
 
-  font-family: "PT Mono", "Andale Mono", monospace;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  color: #ffffff;
+  transform: rotate(-90deg);
 
   opacity: 0.5;
-  transform: rotate(-90deg);
+  color: #ffffff;
+
+  font-family: "PT Mono", "Andale Mono", monospace;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 16px;
 }

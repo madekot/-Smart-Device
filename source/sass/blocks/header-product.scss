@@ -1,49 +1,50 @@
-.header-product {
-
-}
-
 .header-product__title {
-  font-family: "Roboto Condensed", "Arial" sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 80px;
-  line-height: 94px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   letter-spacing: 0.07em;
   text-transform: uppercase;
 
-  color: #FFFFFF;
-  margin-top: 0;
-  margin-bottom: 0;
+  color: #ffffff;
+
+  font-family: "Roboto Condensed", "Arial" sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 94px;
 }
 
 .header-product__description {
-  padding-left: 94px;
   position: relative;
-  font-family: "PT Mono", "Andale Mono", monospace;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 34px;
+
+  margin-bottom: 0;
+  padding-left: 94px;
 
   color: #ffffff;
-  margin-bottom: 0;
+
+  font-family: "PT Mono", "Andale Mono", monospace;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 34px;
 }
 
 .header-product__description::before {
   content: "";
   position: absolute;
-  left: 0;
   top: 20px;
+  left: 0;
+
   width: 66px;
   height: 2px;
   margin-right: 28px;
+
   background-color: #ffffff;
 }
 
 .header-product__button {
-  margin-top: 50px;
   min-width: 407px;
+  margin-top: 50px;
   padding-top: 17px;
   padding-bottom: 17px;
 }

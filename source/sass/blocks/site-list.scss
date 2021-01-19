@@ -1,39 +1,45 @@
 .site-list {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  list-style: none;
-
   display: flex;
   justify-content: space-between;
+
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  list-style: none;
 }
 
 .site-list a {
   display: flex;
-  flex-shrink: 0;
   align-items: center;
+  flex-shrink: 0;
+
   color: inherit;
 
   font-family: "PT Mono", "Andale Mono", monospace;
-  font-style: normal;
-  font-weight: normal;
   font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
   line-height: 18px;
 }
 
 .site-list__item a::before {
   content: "";
+
+  display: inline-block;
+
   width: 18px;
   height: 18px;
   margin-right: 20px;
-  display: inline-block;
+
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: center left;
 };
 
 .site-list__item--icon-mail a::before {
-  background-image: url("../img/icon-mail.svg");
   width: 19px;
   height: 14px;
+
+  background-image: url("../img/icon-mail.svg");
 }
