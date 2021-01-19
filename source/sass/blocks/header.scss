@@ -1,4 +1,5 @@
 .header {
+  min-width: 320px;
   max-width: 1920px;
   margin-right: auto;
   margin-left: auto;
@@ -17,12 +18,18 @@
 .header__content {
   position: relative;
 
+  max-width: 1411px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
   padding-bottom: 200px;
+  padding-left: 15px;
 }
 
 .header__wrap-top {
   display: flex;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .header__nav {
@@ -44,7 +51,7 @@
 .header__site-list {
   min-width: 440px;
   margin-left: auto;
-  padding-top: 14px;
+  // padding-top: 14px;
 }
 
 .header__wrap-bottom {
@@ -68,4 +75,105 @@
   font-weight: normal;
   font-style: normal;
   line-height: 16px;
+}
+
+.site-list__text {
+  margin-left: 20px;
+}
+
+@media (max-width: 1023px) {
+  .header {
+    // max-width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-bottom: 163px;
+
+    color: #ffffff;
+    background-color: #1b2d37;
+    background-image: url("../img/chip-tablet@1x.png"),
+    url("../img/bg-header-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top 113px right 0,
+    center top;
+    background-size: auto, cover;
+  }
+
+  .header__content {
+    padding-right: 25px;
+    padding-bottom: 0;
+    padding-left: 25px;
+  }
+
+  .site-list__text {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px;
+    height: 1px;
+  }
+
+  .site-list__button {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px;
+    height: 1px;
+  }
+
+  .header__site-list {
+    min-width: 83px;
+    margin-left: auto;
+    // padding-top: 14px;
+  }
+
+  .header__link {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px;
+    height: 1px;
+  }
+
+  // .header-product__title {
+  //   font-size: 60px;
+  //   line-height: 70px;
+  // }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding-top: 17px;
+    padding-bottom: 70px;
+
+    background-image: url("../img/chip-mobile@1x.png"),
+    url("../img/bg-header-mobile@1x.jpg");
+    background-position: top 92px right 0,
+    center top;
+  }
+
+  .header__content {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .header__site-list {
+    min-width: 73px;
+  }
+
+  .header__logo {
+    width: 148px;
+    height: 38px;
+  }
+
+  // .header-product__title {
+  //   font-size: 40px;
+  //   line-height: 47px;
+  // }
 }

@@ -1,5 +1,7 @@
 .site-list {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   margin-top: 0;
@@ -23,6 +25,10 @@
   line-height: 18px;
 }
 
+.site-list__item + .site-list__item {
+  margin-left: 20px;
+}
+
 .site-list__item a::before {
   content: "";
 
@@ -30,11 +36,12 @@
 
   width: 18px;
   height: 18px;
-  margin-right: 20px;
+  // margin-right: 20px;
 
   background-image: url("../img/icon-phone.svg");
   background-repeat: no-repeat;
   background-position: center left;
+  background-size: contain;
 };
 
 .site-list__item--icon-mail a::before {
@@ -42,4 +49,18 @@
   height: 14px;
 
   background-image: url("../img/icon-mail.svg");
+}
+
+@media (max-width: 1023px) {
+  .site-list__item a::before {
+    width: 24px;
+    height: 24px;
+  };
+
+  .site-list__item--icon-mail a::before {
+    width: 25px;
+    height: 18px;
+
+    background-image: url("../img/icon-mail.svg");
+  }
 }
