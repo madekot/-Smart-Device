@@ -1,3 +1,8 @@
+.header-product {
+  display: flex;
+  flex-direction: column;
+}
+
 .header-product__title {
   margin-top: 0;
   margin-bottom: 0;
@@ -17,6 +22,7 @@
 .header-product__description {
   position: relative;
 
+  margin-top: 25px;
   margin-bottom: 0;
   padding-left: 94px;
 
@@ -42,8 +48,11 @@
 }
 
 .header-product__button {
+  align-self: flex-start;
+
   min-width: 407px;
-  margin-top: 50px;
+  margin-top: 47px;
+  margin-left: 90px;
   padding-top: 17px;
   padding-bottom: 17px;
 }

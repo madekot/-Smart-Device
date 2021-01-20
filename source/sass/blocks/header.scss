@@ -11,14 +11,14 @@
   background-image: url("../img/chip-desktop@1x.png"),
   url("../img/bg-header-desktop@1x.jpg");
   background-repeat: no-repeat;
-  background-position: top 258px right 9.218%,
+  background-position: top 258px right 14.218%,
   center top;
 }
 
 .header__content {
   position: relative;
 
-  max-width: 1411px;
+  max-width: 1441px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 15px;
@@ -38,9 +38,10 @@
 }
 
 .site-list__button {
+  margin-top: 5px;
   min-width: 180px;
   min-height: 45px;
-  margin-left: 38px;
+  margin-left: 48px;
 }
 
 .header__logo {
@@ -49,7 +50,7 @@
 }
 
 .header__site-list {
-  min-width: 440px;
+  min-width: 433px;
   margin-left: auto;
   // padding-top: 14px;
 }
@@ -62,8 +63,8 @@
 
 .header__link {
   position: absolute;
-  bottom: 36px;
-  left: -17px;
+  bottom: 52px;
+  left: -24px;
 
   transform: rotate(-90deg);
 
