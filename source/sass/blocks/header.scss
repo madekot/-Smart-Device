@@ -52,13 +52,11 @@
 .header__site-list {
   min-width: 433px;
   margin-left: auto;
-  // padding-top: 14px;
 }
 
 .header__wrap-bottom {
   max-width: 718px;
   margin-top: 230px;
-  // padding-right: 45%;
 }
 
 .header__link {
@@ -84,7 +82,6 @@
 
 @media (max-width: 1023px) {
   .header {
-    // max-width: 750px;
     margin-right: auto;
     margin-left: auto;
     padding-top: 20px;
@@ -97,7 +94,6 @@
     background-repeat: no-repeat;
     background-position: top 113px right 0,
     center top;
-    // background-size: auto, cover;
     background-size: auto, auto;
   }
 
@@ -119,7 +115,6 @@
   .header__site-list {
     min-width: 83px;
     margin-left: auto;
-    // padding-top: 14px;
   }
 
   .header__link {
@@ -131,11 +126,6 @@
     width: 1px;
     height: 1px;
   }
-
-  // .header-product__title {
-  //   font-size: 60px;
-  //   line-height: 70px;
-  // }
 }
 
 @media (max-width: 767px) {
@@ -167,9 +157,4 @@
     margin-left: 0;
     margin-top: 232px;
   }
-
-  // .header-product__title {
-  //   font-size: 40px;
-  //   line-height: 47px;
-  // }
 }
