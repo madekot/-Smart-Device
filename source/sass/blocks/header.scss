@@ -38,9 +38,9 @@
 }
 
 .site-list__button {
-  margin-top: 5px;
   min-width: 180px;
   min-height: 45px;
+  margin-top: 5px;
   margin-left: 48px;
 }
 
@@ -97,33 +97,23 @@
     background-repeat: no-repeat;
     background-position: top 113px right 0,
     center top;
-    background-size: auto, cover;
+    // background-size: auto, cover;
+    background-size: auto, auto;
+  }
+
+  .header__wrap-bottom {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 427px;
+    margin-top: 115px;
+    margin-left: 65px;
   }
 
   .header__content {
     padding-right: 25px;
     padding-bottom: 0;
     padding-left: 25px;
-  }
-
-  .site-list__text {
-    position: absolute;
-
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-
-    width: 1px;
-    height: 1px;
-  }
-
-  .site-list__button {
-    position: absolute;
-
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-
-    width: 1px;
-    height: 1px;
   }
 
   .header__site-list {

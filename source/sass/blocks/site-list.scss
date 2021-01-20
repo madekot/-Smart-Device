@@ -63,4 +63,24 @@
 
     background-image: url("../img/icon-mail.svg");
   }
+
+  .site-list__text {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px;
+    height: 1px;
+  }
+
+  .site-list__button {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px;
+    height: 1px;
+  }
 }

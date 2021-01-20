@@ -64,6 +64,7 @@
   }
 
   .header-product__description {
+    margin-top: 30px;
     padding-left: 48px;
 
     font-size: 18px;
@@ -76,18 +77,12 @@
     width: 33px;
   }
 
-  .header__wrap-bottom {
-    max-width: 427px;
-  }
-
   .header-product__button {
     min-width: 379px;
+    margin-top: 55px;
     margin-left: auto;
-  }
-
-  .header__wrap-bottom {
-    display: flex;
-    flex-direction: column;
+    padding-top: 18px;
+    padding-bottom: 18px;
   }
 }
 
@@ -104,6 +99,7 @@
 
   .header-product__button {
     min-width: 287px;
+    margin-top: 50px;
   }
 
   .header-product__button-text {
