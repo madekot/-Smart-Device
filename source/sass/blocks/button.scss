@@ -18,13 +18,30 @@
   line-height: 16px;
 }
 
+.button:hover {
+  border: 1px solid #00b2ff;
+  color:  #00b2ff;
+}
+
 .button--color {
   color: #ffffff;
   border: none;
   background-color: #00b2ff;
 }
 
+.button--color:hover {
+  color: #00b2ff;
+  border: none;
+  background-color: #ffffff;
+}
+
+.button:active {
+  opacity: 0.7;
+}
+
 .button--size-big {
   font-size: 16px;
   line-height: 19px;
 }
+
+
