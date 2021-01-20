@@ -1,0 +1,29 @@
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+
+  color: #666666;
+
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21.5px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}

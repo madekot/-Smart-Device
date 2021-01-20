@@ -1,0 +1,181 @@
+.header {
+  min-width: 320px;
+  max-width: 1920px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 33px;
+  padding-bottom: 90px;
+
+  color: #ffffff;
+  background-color: #1b2d37;
+  background-image: url("../img/chip-desktop@1x.png"),
+  url("../img/bg-header-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top 258px right 14.218%,
+  center top;
+  background-size: 705px, 1920px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/chip-desktop@2x.png"),
+    url("../img/bg-header-desktop@2x.jpg");
+  }
+}
+
+.header__content {
+  position: relative;
+
+  max-width: 1441px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-bottom: 200px;
+  padding-left: 15px;
+}
+
+.header__wrap-top {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.header__nav {
+  display: flex;
+  flex-grow: 1;
+}
+
+.site-list__button {
+  min-width: 180px;
+  min-height: 45px;
+  margin-top: 5px;
+  margin-left: 48px;
+}
+
+.header__logo {
+  width: 202px;
+  height: 52px;
+}
+
+.header__site-list {
+  min-width: 433px;
+  margin-left: auto;
+}
+
+.header__wrap-bottom {
+  max-width: 718px;
+  margin-top: 230px;
+}
+
+.header__link {
+  position: absolute;
+  bottom: 52px;
+  left: -24px;
+
+  transform: rotate(-90deg);
+
+  opacity: 0.5;
+  color: #ffffff;
+
+  font-family: "PT Mono", "Andale Mono", monospace;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 16px;
+}
+
+.header__link:hover {
+  opacity: 1;
+}
+
+.site-list__text {
+  margin-left: 20px;
+}
+
+@media (max-width: 1023px) {
+  .header {
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 20px;
+    padding-bottom: 163px;
+
+    color: #ffffff;
+    background-color: #1b2d37;
+    background-image: url("../img/chip-tablet@1x.png"),
+    url("../img/bg-header-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top 113px right 0,
+    center top;
+    background-size: 260px, 770px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/chip-tablet@2x.png"),
+      url("../img/bg-header-tablet@2x.jpg");
+    }
+  }
+
+  .header__wrap-bottom {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 427px;
+    margin-top: 115px;
+    margin-left: 65px;
+  }
+
+  .header__content {
+    padding-right: 25px;
+    padding-bottom: 0;
+    padding-left: 25px;
+  }
+
+  .header__site-list {
+    min-width: 83px;
+    margin-left: auto;
+  }
+
+  .header__link {
+    position: absolute;
+
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+
+    width: 1px;
+    height: 1px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding-top: 17px;
+    padding-bottom: 70px;
+
+    background-image: url("../img/chip-mobile@1x.png"),
+    url("../img/bg-header-mobile@1x.jpg");
+    background-position: top 92px right 0,
+    center top;
+    background-size: 301px, 320px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/chip-mobile@2x.png"),
+      url("../img/bg-header-mobile@2x.jpg");
+    }
+  }
+
+  .header__content {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .header__site-list {
+    min-width: 73px;
+  }
+
+  .header__logo {
+    width: 148px;
+    height: 38px;
+  }
+
+  .header__wrap-bottom {
+    margin-top: 232px;
+    margin-left: 0;
+  }
+}
