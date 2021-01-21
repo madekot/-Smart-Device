@@ -8,8 +8,9 @@
   text-transform: uppercase;
 
   color: #ffffff;
-  border: 1px solid #ffffff;
+  border: none;
   border-radius: 5px;
+  box-shadow: inset 0 0 0 1px #ffffff;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 14px;
@@ -19,14 +20,15 @@
 }
 
 .button:hover {
-  border: 1px solid #00b2ff;
-  color:  #00b2ff;
+  color: #00b2ff;
+  box-shadow: inset 0 0 0 1px #00b2ff;
 }
 
 .button--color {
   color: #ffffff;
   border: none;
   background-color: #00b2ff;
+  box-shadow: none;
 }
 
 .button--color:hover {
@@ -44,4 +46,26 @@
   line-height: 19px;
 }
 
+.button--open {
+  background-color: transparent;
+  background-image: url("../img/icon-plus.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: none;
+}
 
+.button--open:hover {
+  cursor: pointer;
+}
+
+.button--close {
+  background-color: transparent;
+  background-image: url("../img/icon-minus.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: none;
+}
+
+.button--close:hover {
+  cursor: pointer;
+}

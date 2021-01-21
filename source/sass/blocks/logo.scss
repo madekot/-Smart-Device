@@ -20,6 +20,19 @@
     clip-path: polygon(0 0, 38px 0, 38px 100%, 0% 100%);
   }
 
+  .logo--image-full {
+    position: static;
+
+    clip-path: none;
+  }
+
+  .logo--image-full .logo__image {
+    position: static;
+
+    width: 100%;
+    height: auto;
+  }
+
   .logo__image {
     position: absolute;
     left: -22px;
