@@ -13,3 +13,7 @@
 .social-list__item + .social-list__item {
   margin-left: 15px;
 }
+
+.social-list__item:hover path {
+  fill: #00b2ff;
+}

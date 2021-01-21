@@ -135,6 +135,15 @@
   list-style: none;
 }
 
+.footer a:hover {
+  color: #00b2ff;
+}
+
+.footer a:active {
+  color: #00b2ff;
+  opacity: 0.2;
+}
+
 .footer__list + .footer__list {
   margin-left: 70px;
 }
