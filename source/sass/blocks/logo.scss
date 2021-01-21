@@ -22,13 +22,15 @@
 
   .logo--image-full {
     position: static;
+
     clip-path: none;
   }
 
   .logo--image-full .logo__image {
     position: static;
-    height: auto;
+
     width: 100%;
+    height: auto;
   }
 
   .logo__image {

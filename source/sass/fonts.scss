@@ -3,9 +3,7 @@
   font-weight: 400;
   font-style: normal;
 
-  src: local(""),
-    url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2") format("woff2"),
-    url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff") format("woff");
+  src: local(""), url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/roboto-condensed-v19-latin_cyrillic-regular.woff") format("woff");
 }
 
 @font-face {
@@ -13,9 +11,7 @@
   font-weight: 700;
   font-style: bold;
 
-  src: local(""),
-    url("../fonts/roboto-condensed-v19-latin_cyrillic-700.woff2") format("woff2"),
-    url("../fonts/roboto-condensed-v19-latin_cyrillic-700.woff") format("woff");
+  src: local(""), url("../fonts/roboto-condensed-v19-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-condensed-v19-latin_cyrillic-700.woff") format("woff");
 }
 
 @font-face {
@@ -23,7 +19,5 @@
   font-weight: 400;
   font-style: normal;
 
-  src: local(""),
-    url("../fonts/pt-mono-v8-latin_cyrillic-regular.woff2") format("woff2"),
-    url("../fonts/pt-mono-v8-latin_cyrillic-regular.woff") format("woff");
+  src: local(""), url("../fonts/pt-mono-v8-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/pt-mono-v8-latin_cyrillic-regular.woff") format("woff");
 }
