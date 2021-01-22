@@ -11,14 +11,36 @@
   margin-top: 110px;
 }
 
+.main__products-service {
+  max-width: 1220px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 93px;
+  padding-right: 25px;
+  padding-bottom: 127px;
+  padding-left: 25px;
+}
+
+.main__wrap-products-service {
+  background-color: #1B2D37;
+}
+
 @media (max-width: 1023px) {
   .main__wrapper {
     margin-top: 59px;
   }
 
   .main__about-company {
-    max-width: 717px;
+    max-width: 767px;
     margin-top: 60px;
+  }
+
+  .main__products-service {
+    max-width: 770px;
+    padding-top: 53px;
+    padding-right: 25px;
+    padding-bottom: 78px;
+    padding-left: 25px;
   }
 }
 
@@ -26,6 +48,12 @@
   .main__wrapper {
     margin-top: 37px;
     padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .main__products-service {
+    padding-right: 15px;
+    padding-bottom: 64px;
     padding-left: 15px;
   }
 }
