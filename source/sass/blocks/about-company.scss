@@ -1,0 +1,110 @@
+.about-company {
+  // max-width: 1168px;
+  padding-bottom: 7px;
+  padding-left: 180px;
+
+  color: #666666;
+  background-image: url("../img/year-about-us-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: top 7px left;
+  // background-size: 114px 304px;
+  background-size: contain;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/year-about-us-desktop@2x.jpg");
+  }
+}
+
+.about-company h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 45px;
+}
+
+.about-company p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+
+  margin-top: 21px;
+  margin-bottom: 0;
+
+  font-family: "PT Mono", "Andale Mono", monospace;
+  font-size: 16px;
+  line-height: 22px;
+
+  -webkit-line-clamp: 4;
+}
+
+.about-company__button {
+  min-width: 180px;
+  margin-top: 40px;
+}
+
+@media (max-width: 1023px) {
+  .about-company {
+    background-image: url("../img/year-about-us-tablet@1x.jpg");
+    // background-size: 130px 346px;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/year-about-us-tablet@2x.jpg");
+    }
+  }
+
+  .about-company h2 {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .about-company br {
+    display: none;
+  }
+
+  .about-company__button {
+    margin-left: 5px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .about-company {
+    // max-width: 290px;
+    padding-left: 0;
+
+    background-image: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: none;
+    }
+  }
+
+  .about-company h2 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .about-company p {
+    margin-top: 15px;
+
+    -webkit-line-clamp: 8;
+  }
+
+  .about-company p + p {
+    margin-top: 42px;
+
+    -webkit-line-clamp: 8;
+  }
+
+  .about-company__button {
+    margin-top: 30px;
+  }
+
+  .br {
+    display: block;
+  }
+}
