@@ -1,23 +1,25 @@
 (function() {
   'use strict';
 
-  const pageFooter = document.querySelector('footer > .footer');
-  pageFooter.classList.remove('footer--nojs');
+  const pageFooter = document.querySelector('body > .footer');
+  if (pageFooter) {
+    pageFooter.classList.remove('footer--nojs');
+  }
 
   const footerButtons = document.querySelectorAll('.footer__button--togle-js');
-  const toggleMenuState = (buttonElement) => {
-    if (buttonElement.classList.contains('button--close')) {
-      buttonElement.classList.remove('button--close');
-      buttonElement.classList.add('button--open');
+  const replaceClass = (element, firstClass, secondClass) => {
+    if (element.classList.contains(firstClass)) {
+      element.classList.remove(firstClass);
+      element.classList.add(secondClass);
     } else {
-      buttonElement.classList.add('button--close');
-      buttonElement.classList.remove('button--open');
+      element.classList.add(firstClass);
+      element.classList.remove(secondClass);
     }
   }
 
-  footerButtons.forEach((element) => {
-    element.addEventListener('click', () => {
-      toggleMenuState(element);
+  footerButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      replaceClass(button, 'button--close', 'button--open');
     });
   });
 })();
