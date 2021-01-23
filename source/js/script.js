@@ -1,15 +1,23 @@
-'use strict';
-var pageHeader = document.querySelector('.page-header');
-var headerToggle = document.querySelector('.page-header__toggle');
+(function() {
+  'use strict';
 
-pageHeader.classList.remove('page-header--nojs');
+  const pageFooter = document.querySelector('footer > .footer');
+  pageFooter.classList.remove('footer--nojs');
 
-headerToggle.addEventListener('click', function () {
-  if (pageHeader.classList.contains('page-header--closed')) {
-    pageHeader.classList.remove('page-header--closed');
-    pageHeader.classList.add('page-header--opened');
-  } else {
-    pageHeader.classList.add('page-header--closed');
-    pageHeader.classList.remove('page-header--opened');
+  const footerButtons = document.querySelectorAll('.footer__button--togle-js');
+  const toggleMenuState = (buttonElement) => {
+    if (buttonElement.classList.contains('button--close')) {
+      buttonElement.classList.remove('button--close');
+      buttonElement.classList.add('button--open');
+    } else {
+      buttonElement.classList.add('button--close');
+      buttonElement.classList.remove('button--open');
+    }
   }
-});
+
+  footerButtons.forEach((element) => {
+    element.addEventListener('click', () => {
+      toggleMenuState(element);
+    });
+  });
+})();

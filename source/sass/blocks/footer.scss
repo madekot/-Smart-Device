@@ -286,6 +286,14 @@
     padding-bottom: 26px;
   }
 
+  .footer--nojs .footer__button--togle-js {
+    display: none;
+  }
+
+  .footer--nojs .footer__button--togle-js + .footer__sections-wrap-site-lists {
+    display: block;
+  }
+
   .footer__content {
     padding-right: 15px;
     padding-left: 15px;
