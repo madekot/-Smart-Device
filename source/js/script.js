@@ -2,24 +2,43 @@
   'use strict';
 
   const pageFooter = document.querySelector('body > .footer');
+  const footerButtons = document.querySelectorAll('.footer__button--togle-js');
+
+  const closeTab = (button) => {
+    button.classList.remove('button--close');
+    button.classList.add('button--open');
+  };
+
+  const closeAllTabs = (elements) => {
+    elements.forEach((button) => {
+      closeTab(button);
+    });
+  };
+
+  const openTab = (button) => {
+    button.classList.remove('button--open');
+    button.classList.add('button--close');
+  };
+
+  const changeTabsStates = (button) => {
+    if (button.classList.contains('button--close')) {
+      closeTab(button)
+    } else {
+      closeAllTabs(footerButtons)
+      openTab(button)
+    }
+  }
+
   if (pageFooter) {
     pageFooter.classList.remove('footer--nojs');
   }
 
-  const footerButtons = document.querySelectorAll('.footer__button--togle-js');
-  const replaceClass = (element, firstClass, secondClass) => {
-    if (element.classList.contains(firstClass)) {
-      element.classList.remove(firstClass);
-      element.classList.add(secondClass);
-    } else {
-      element.classList.add(firstClass);
-      element.classList.remove(secondClass);
-    }
+  if (footerButtons) {
+    footerButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        changeTabsStates(button);
+      });
+    });
   }
 
-  footerButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      replaceClass(button, 'button--close', 'button--open');
-    });
-  });
 })();
