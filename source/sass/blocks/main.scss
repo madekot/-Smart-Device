@@ -1,5 +1,8 @@
 .main {
   width: 100%;
+  background-image: url("../img/bg-about-us-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top 43px left;
 }
 
 .main__wrapper {
@@ -32,6 +35,11 @@
 }
 
 @media (max-width: 1023px) {
+  .main {
+    background-image: url("../img/bg-about-us-tablet.svg");
+    background-position: top 242px right;
+  }
+
   .main__wrapper {
     margin-top: 59px;
   }
@@ -55,6 +63,11 @@
 }
 
 @media (max-width: 767px) {
+  .main {
+    background-image: url("../img/bg-about-us-mobile.svg");
+    background-position: top 804px right;
+  }
+
   .main__wrapper {
     margin-top: 37px;
     padding-right: 15px;
