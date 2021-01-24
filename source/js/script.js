@@ -1,41 +1,40 @@
-(function() {
-  'use strict';
+'use strict';
+(function () {
+  var pageFooter = document.querySelector('body > .footer');
+  var footerButtons = document.querySelectorAll('.footer__button--togle-js');
 
-  const pageFooter = document.querySelector('body > .footer');
-  const footerButtons = document.querySelectorAll('.footer__button--togle-js');
-
-  const closeTab = (button) => {
+  var closeTab = function (button) {
     button.classList.remove('button--close');
     button.classList.add('button--open');
   };
 
-  const closeAllTabs = (elements) => {
-    elements.forEach((button) => {
+  var closeAllTabs = function (elements) {
+    elements.forEach(function (button) {
       closeTab(button);
     });
   };
 
-  const openTab = (button) => {
+  var openTab = function (button) {
     button.classList.remove('button--open');
     button.classList.add('button--close');
   };
 
-  const changeTabsStates = (button) => {
+  var changeTabsStates = function (button) {
     if (button.classList.contains('button--close')) {
-      closeTab(button)
+      closeTab(button);
     } else {
-      closeAllTabs(footerButtons)
-      openTab(button)
+      closeAllTabs(footerButtons);
+      openTab(button);
     }
-  }
+  };
 
   if (pageFooter) {
     pageFooter.classList.remove('footer--nojs');
   }
 
   if (footerButtons) {
-    footerButtons.forEach((button) => {
-      button.addEventListener('click', () => {
+    footerButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
         changeTabsStates(button);
       });
     });

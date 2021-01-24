@@ -26,9 +26,9 @@
 }
 
 .about-company p {
-  display: -webkit-box;
+  // display: -webkit-box;
   overflow: hidden;
-  -webkit-box-orient: vertical;
+  // -webkit-box-orient: vertical;
 
   margin-top: 21px;
   margin-bottom: 0;
@@ -37,7 +37,7 @@
   font-size: 16px;
   line-height: 22px;
 
-  -webkit-line-clamp: 4;
+  // -webkit-line-clamp: 4;
 }
 
 .about-company__button {
@@ -47,6 +47,8 @@
 
 @media (max-width: 1023px) {
   .about-company {
+    padding-right: 3px;
+
     background-image: url("../img/year-about-us-tablet@1x.jpg");
     // background-size: 130px 346px;
     background-size: contain;
@@ -54,6 +56,14 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../img/year-about-us-tablet@2x.jpg");
     }
+  }
+
+  .about-company .about-company__text-hidden {
+    display: none;
+  }
+
+  .about-company__dots::after {
+    content: "..";
   }
 
   .about-company h2 {
@@ -91,13 +101,13 @@
   .about-company p {
     margin-top: 15px;
 
-    -webkit-line-clamp: 8;
+    // -webkit-line-clamp: 8;
   }
 
   .about-company p + p {
     margin-top: 42px;
 
-    -webkit-line-clamp: 8;
+    // -webkit-line-clamp: 8;
   }
 
   .about-company__button {
