@@ -10,6 +10,7 @@
   color: #ffffff;
   border: none;
   border-radius: 5px;
+  background-color: transparent;
   box-shadow: inset 0 0 0 1px #ffffff;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -22,6 +23,7 @@
 .button:hover {
   color: #00b2ff;
   box-shadow: inset 0 0 0 1px #00b2ff;
+  background-color: #ffffff;
 }
 
 .button--color {
@@ -39,14 +41,14 @@
 
 .button--color-white {
   color: #00b2ff;
-  box-shadow: inset 0 0 0 1px #00b2ff;
   background-color: #ffffff;
+  box-shadow: inset 0 0 0 1px #00b2ff;
 }
 
 .button--color-white:hover {
-  box-shadow: none;
-  background-color: #00b2ff;
   color: #ffffff;
+  background-color: #00b2ff;
+  box-shadow: none;
 }
 
 .button:active {

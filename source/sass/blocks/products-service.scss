@@ -19,7 +19,7 @@
 .products-service__list {
   display: grid;
 
-  margin-top: 45px;
+  margin-top: 52px;
   margin-bottom: 0;
   padding-left: 0;
 
@@ -43,7 +43,7 @@
   flex-grow: 1;
   justify-content: space-between;
 
-  padding: 54px 43px;
+  padding: 50px 44px;
 
   color: #ffffff;
   background-image: url("../img/bg-product-card-1-desktop@1x.jpg");
@@ -135,6 +135,7 @@
     grid-template-columns: minmax(715px, auto);
     grid-auto-rows: minmax(256px, auto);
     grid-gap: 46px;
+    margin-top: 49px;
   }
 
   .products-service__item--image-production .products-service__item-link {
@@ -166,7 +167,7 @@
   }
 
   .products-service__item-link {
-    padding-top: 43px;
+    padding-top: 40px;
   }
 }
 
@@ -183,7 +184,7 @@
   }
 
   .products-service__list {
-    margin-top: 37px;
+    margin-top: 41px;
 
     grid-template-columns: minmax(290px, auto);
     grid-gap: 30px;
