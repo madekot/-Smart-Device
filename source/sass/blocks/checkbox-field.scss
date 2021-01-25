@@ -26,6 +26,7 @@
 
   width: 16px;
   height: 16px;
+  margin-right: 16px;
 
   background-image: url("../img/icon-checkbox-off.svg");
   background-repeat: no-repeat;
@@ -33,10 +34,6 @@
 
 .checkbox-field input:checked + .checkbox-field__icon {
   background-image: url("../img/icon-checkbox-on.svg");
-}
-
-.checkbox-field__icon {
-  margin-right: 16px;
 }
 
 .checkbox-field__icon--size-big {

@@ -81,20 +81,17 @@
   }
 
   .about-company__button {
-    margin-left: 3px;
-  }
-
-  .about-company__button {
     margin-top: 43px;
+    margin-left: 3px;
   }
 }
 
 
 @media (max-width: 767px) {
   .about-company {
+    padding-right: 0;
     // max-width: 290px;
     padding-left: 0;
-    padding-right: 0;
 
     background-image: none;
 
