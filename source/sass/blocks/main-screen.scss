@@ -20,15 +20,19 @@
   }
 }
 
+.main-screen__wrap-top {
+  margin-left: 3px;
+}
+
 .main-screen__content {
   position: relative;
 
-  max-width: 1441px;
+  max-width: 1470px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-bottom: 200px;
-  padding-left: 15px;
+  padding-right: 30px;
+  padding-bottom: 186px;
+  padding-left: 25px;
 }
 
 .main-screen__wrap-bottom {
@@ -76,15 +80,15 @@
 
   min-width: 407px;
   margin-top: 47px;
-  margin-left: 90px;
+  margin-left: 97px;
   padding-top: 17px;
   padding-bottom: 17px;
 }
 
 .main-screen__link {
   position: absolute;
-  bottom: 52px;
-  left: -24px;
+  bottom: 37px;
+  left: -12px;
 
   transform: rotate(-90deg);
 

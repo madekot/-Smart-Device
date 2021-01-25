@@ -20,9 +20,9 @@
   margin-bottom: 0;
 
   font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: normal;
-  line-height: 45px;
+  line-height: 51px;
 }
 
 .about-company p {
@@ -30,7 +30,7 @@
   overflow: hidden;
   // -webkit-box-orient: vertical;
 
-  margin-top: 21px;
+  margin-top: 20px;
   margin-bottom: 0;
 
   font-family: "PT Mono", "Andale Mono", monospace;
@@ -42,7 +42,7 @@
 
 .about-company__button {
   min-width: 180px;
-  margin-top: 40px;
+  margin-top: 36px;
 }
 
 @media (max-width: 1023px) {

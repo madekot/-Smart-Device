@@ -23,14 +23,14 @@
   max-width: 1220px;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 93px;
+  padding-top: 88px;
   padding-right: 25px;
   padding-bottom: 127px;
   padding-left: 25px;
 }
 
 .main__wrap-products-service {
-  margin-top: 110px;
+  margin-top: 106px;
 
   background-color: #1b2d37;
 }
@@ -42,19 +42,18 @@
 .main__wrapper-form {
   width: 100%;
   max-width: 1920px;
-  margin-right: auto;
   margin-left: auto;
-  padding-top: 100px;
-  padding-bottom: 110px;
+  padding-top: 91px;
+  padding-bottom: 115px;
 
   background-color: #00b2ff;
   background-image: url("../img/bg-form.svg");
   background-repeat: no-repeat;
-  background-position: top -50px left 150px;
+  background-position: top -60px left 175px;
 }
 
 .main__inner-form {
-  max-width: calc(1195px + 25px + 25px);
+  max-width: calc(1170px + 25px + 25px);
   margin-right: auto;
   margin-left: auto;
   padding-right: 25px;
@@ -62,7 +61,7 @@
 
   background-image: url("../img/plane-desktop@1x.png");
   background-repeat: no-repeat;
-  background-position: top 64px left;
+  background-position: top 70px left;
   background-size: 511px auto;
 
   @media (min-resolution: 2dppx) {
@@ -71,7 +70,7 @@
 }
 
 .main__form {
-  max-width: 574px;
+  max-width: 575px;
   margin-left: auto;
 }
 
