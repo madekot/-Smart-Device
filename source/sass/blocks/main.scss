@@ -90,7 +90,7 @@
   }
 
   .main__products-service {
-    max-width: 770px;
+    // max-width: 770px;
     padding-top: 50px;
     padding-right: 25px;
     padding-bottom: 78px;
@@ -109,11 +109,11 @@
   }
 
   .main__inner-form {
-    max-width: 625px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    // max-width: 625px;
+    // margin-right: auto;
+    // margin-left: auto;
+    padding-right: 88px;
+    padding-left: 88px;
 
     background-image: none;
   }
@@ -137,13 +137,14 @@
   }
 
   .main__wrapper-form {
-    padding-top: 33px;
-    padding-bottom: 41px;
+    padding-top: 30px;
+    padding-bottom: 43px;
 
     background-image: none;
   }
 
   .main__products-service {
+    padding-top: 44px;
     padding-right: 15px;
     padding-bottom: 64px;
     padding-left: 15px;
@@ -156,5 +157,9 @@
   .main__inner-form {
     padding-right: 15px;
     padding-left: 15px;
+  }
+
+  .main__about-company {
+    margin-top: 52px;
   }
 }

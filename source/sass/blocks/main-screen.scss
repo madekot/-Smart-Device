@@ -106,6 +106,10 @@
   opacity: 1;
 }
 
+.main-screen__button-text--show-mobile {
+  display: none;
+}
+
 @media (max-width: 1023px) {
   .main-screen {
     margin-right: auto;
@@ -217,12 +221,10 @@
   }
 
   .main-screen__button-text {
-    position: absolute;
+    display: none;
+  }
 
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-
-    width: 1px;
-    height: 1px;
+  .main-screen__button-text--show-mobile {
+    display: block;
   }
 }

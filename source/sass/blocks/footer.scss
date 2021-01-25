@@ -203,6 +203,7 @@
 
   .footer__law {
     margin-left: 33px;
+
     grid-row: 1 / span 1;
     grid-column: 4 / span 3;
   }
@@ -348,7 +349,7 @@
     justify-content: space-between;
 
     width: 100%;
-    margin-top: 26px;
+    margin-top: 0;
     margin-left: 0;
     padding-top: 31px;
 
@@ -357,7 +358,7 @@
   }
 
   .footer__copyright {
-    margin-top: 26px;
+    margin-top: 0;
     padding-top: 29px;
 
     justify-self: center;
@@ -391,12 +392,15 @@
 
   .footer__sections-wrap-site-lists {
     width: 100%;
-    margin-top: 31px;
+    margin-top: 10px;
+    margin-bottom: 24px;
   }
 
   .footer__button {
     position: relative;
     z-index: 1;
+    top: -12px;
+    left: 10px;
 
     display: inline-block;
 

@@ -94,6 +94,7 @@
   .about-company {
     // max-width: 290px;
     padding-left: 0;
+    padding-right: 0;
 
     background-image: none;
 
@@ -108,13 +109,13 @@
   }
 
   .about-company p {
-    margin-top: 15px;
+    margin-top: 21px;
 
     // -webkit-line-clamp: 8;
   }
 
   .about-company p + p {
-    margin-top: 42px;
+    margin-top: 39px;
 
     // -webkit-line-clamp: 8;
   }
