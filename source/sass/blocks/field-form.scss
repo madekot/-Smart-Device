@@ -21,6 +21,11 @@
   line-height: 22px;
 }
 
+.field-form--size-big input,
+.field-form--size-big textarea {
+  padding: 14px 24px;
+}
+
 .field-form input:hover {
   box-shadow: inset 0 0 0 1px #ffffff;
 }

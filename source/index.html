@@ -205,10 +205,10 @@
               <label class="visually-hidden" for="question-field">Ваш вопрос</label>
             </div>
             <button class="callback__submit-button button" type="submit">Задать вопрос</button>
-            <label class="callback__checkbox-field callback__checkbox-label" for="checkbox-field">
-              <span class="callback__checkbox-label-text">Я согласен на обработку персональных данных</span>
-              <input type="checkbox" id="checkbox-field" checked>
-              <span class="callback__checkbox-field-icon"></span>
+            <label class="callback__checkbox-field checkbox-field" for="checkbox-field-1">
+              <span class="checkbox-field__text">Я согласен на обработку персональных данных</span>
+              <input type="checkbox" id="checkbox-field-1" checked>
+              <span class="checkbox-field__icon"></span>
             </label>
           </form>
         </section>
@@ -317,6 +317,38 @@
       </div>
     </div>
   </footer>
+  <div class="popup">
+    <button class="popup__close button button--color">
+      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M0.146522 0.853553C-0.04874 0.658291 -0.04874 0.341709 0.146522 0.146447C0.341784 -0.0488155 0.658367 -0.0488156 0.853629 0.146447L8.27821 7.57103L15.7028 0.14645C15.8981 -0.0488124 16.2146 -0.0488125 16.4099 0.14645C16.6052 0.341712 16.6052 0.658294 16.4099 0.853556L8.98532 8.27814L16.41 15.7028C16.6052 15.8981 16.6052 16.2146 16.41 16.4099C16.2147 16.6052 15.8981 16.6052 15.7029 16.4099L8.27821 8.98525L0.853553 16.4099C0.658291 16.6052 0.341709 16.6052 0.146447 16.4099C-0.0488155 16.2146 -0.0488156 15.8981 0.146447 15.7028L7.57111 8.27814L0.146522 0.853553Z"
+          fill="currentColor" />
+      </svg>
+      <span class="visually-hidden">закрыть</span>
+    </button>
+    <p class="popup__lead">Закажите звонок</p>
+    <p class="popup__text">Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
+    <form action="post" class="popup__form">
+      <div class="popup__name-field field-form field-form--size-big">
+        <input type="text" id="popup-name-field" placeholder="Имя">
+        <label class="visually-hidden" for="popup-name-field">Имя</label>
+      </div>
+      <div class="popup__form-field field-form field-form--size-big">
+        <input type="text" id="popup-tel-field" placeholder="Телефон">
+        <label class="visually-hidden" for="popup-tel-field">Телефон</label>
+      </div>
+      <div class="popup__form-field popup__form-field--textarea field-form field-form--size-big">
+        <textarea name="popup-question-field" id="popup-question-field" placeholder="Ваш вопрос"></textarea>
+        <label class="visually-hidden" for="popup-question-field">Ваш вопрос</label>
+      </div>
+      <button class="popup__submit-button button" type="submit">Отправить</button>
+      <label class="popup__checkbox-field checkbox-field checkbox-field--align-start" for="checkbox-field-2">
+        <span class="checkbox-field__text checkbox-field__text--size-smal">Я согласен на обработку персональных данных</span>
+        <input type="checkbox" id="checkbox-field-2" checked>
+        <span class="checkbox-field__icon checkbox-field__icon--size-big"></span>
+      </label>
+    </form>
+  </div>
   <script src="/js/script.js"></script>
 </body>
 
