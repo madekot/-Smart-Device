@@ -1,0 +1,199 @@
+.callback {
+  // width: 574px;
+
+  color: #ffffff;
+  background-color: #00b2ff;
+}
+
+.callback__lead {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 36px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 51px;
+}
+
+.callback__text {
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 5px;
+
+  font-family: "PT Mono", "Andale Mono", monospace;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 22px;
+}
+
+.callback__form {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 49px;
+  margin-left: 5px;
+}
+
+.callback__name-field {
+  // width: 50%;
+  flex-grow: 1;
+}
+
+.callback__phone-field {
+  flex-grow: 1;
+  // width: calc(50% - 31px);
+
+  margin-left: 31px;
+}
+
+.callback__question-field {
+  width: 100%;
+  min-height: 154px;
+  margin-top: 40px;
+}
+
+.callback__submit-button {
+  // width: 50%;
+  min-width: 270px;
+  margin-top: 43px;
+}
+
+.callback__checkbox-field-icon {
+  display: block;
+  flex-shrink: 0;
+  order: -1;
+
+  width: 16px;
+  height: 16px;
+
+  background-image: url("../img/icon-checkbox-off.svg");
+  background-repeat: no-repeat;
+  // background-position: center center;
+
+  // background-color: tomato;
+}
+
+.callback__checkbox-label {
+  display: flex;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  flex-grow: 1;
+
+  width: calc(50% - 38px);
+  max-width: 230px;
+  margin-top: 38px;
+  margin-left: 38px;
+  margin-left: 37px;
+}
+
+.callback__checkbox-label:hover {
+  opacity: 0.7;
+}
+
+.callback__checkbox-field input {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.callback__checkbox-field input:checked + .callback__checkbox-field-icon {
+  background-image: url("../img/icon-checkbox-on.svg");
+}
+
+.callback__checkbox-field-icon {
+  margin-right: 16px;
+}
+
+.callback__checkbox-field input:focus + .callback__checkbox-field-icon {
+  box-shadow: 0 0 0 2px black;
+}
+
+.callback__checkbox-label-text {
+  margin-top: 10px;
+
+  opacity: 0.8;
+  color: #ffffff;
+
+  font-family: "PT Mono", "Andale Mono", monospace;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 16px;
+}
+
+@media (max-width: 1023px) {
+  .callback {
+    // width: 595px;
+  }
+
+  .callback__lead {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .callback__text {
+    margin-top: 18px;
+  }
+
+  .callback__form {
+    margin-top: 52px;
+  }
+
+  .callback__question-field {
+    min-height: 160px;
+    margin-top: 45px;
+  }
+
+  .callback__submit-button {
+    min-width: 280px;
+  }
+
+  .callback__checkbox-field-icon {
+    margin-right: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .callback {
+    // width: 290px;
+  }
+
+  .callback__lead {
+    font-size: 28px;
+    line-height: 39px;
+  }
+
+  .callback__text {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  .callback__form {
+    margin-top: 25px;
+    margin-left: 0;
+  }
+
+  .callback__phone-field {
+    margin-top: 32px;
+    margin-left: 0;
+  }
+
+  .callback__question-field {
+    min-height: 104px;
+    margin-top: 30px;
+  }
+
+  .callback__submit-button {
+    flex-grow: 1;
+
+    margin-top: 34px;
+  }
+
+  .callback__checkbox-label {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}

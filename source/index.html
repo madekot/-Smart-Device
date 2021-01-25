@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <div class="main-screen">
+  <!-- <div class="main-screen">
     <div class="main-screen__content">
       <header class="main-screen__wrap-top header">
         <nav class="header__nav">
@@ -41,8 +41,8 @@
       </div>
       <a href="#advantages" class="main-screen__link">Скролл вниз</a>
     </div>
-  </div>
-  <main class="main">
+  </div> -->
+  <!-- <main class="main">
     <h1 class="visually-hidden">Интернет магазин электроники и запчестей Smart Device</h1>
     <div class="main__wrapper">
       <section class="main__advantages advantages" id="advantages">
@@ -179,9 +179,36 @@
           </li>
         </ul>
       </section>
+    </div> -->
+    <div class="main__wrap-form">
+      <section class="main__form callback">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <p class="callback__lead">Остались вопросы? Задайте их нам!</p>
+        <p class="callback__text">Мы проконсультируем Вас бесплатно</p>
+        <form action="post" class="callback__form">
+          <div class="callback__name-field field-form">
+            <input type="text" id="name-field" placeholder="Имя">
+            <label class="visually-hidden" for="name-field">Имя</label>
+          </div>
+          <div class="callback__phone-field field-form">
+            <input type="text" id="tel-field" placeholder="Телефон">
+            <label class="visually-hidden" for="tel-field">Телефон</label>
+          </div>
+          <div class="callback__question-field field-form">
+            <textarea name="question-field" id="question-field" placeholder="Ваш вопрос"></textarea>
+            <label class="visually-hidden" for="question-field">Ваш вопрос</label>
+          </div>
+          <button class="callback__submit-button button" type="submit">Задать вопрос</button>
+          <label class="callback__checkbox-field callback__checkbox-label" for="checkbox-field">
+            <span class="callback__checkbox-label-text">Я согласен на обработку персональных данных</span>
+            <input type="checkbox" id="checkbox-field" checked>
+            <span class="callback__checkbox-field-icon"></span>
+          </label>
+        </form>
+      </section>
     </div>
   </main>
-  <footer class="footer footer--nojs">
+  <!-- <footer class="footer footer--nojs">
     <div class="footer__content">
       <a class="footer__logo logo logo--image-full">
         <img class="logo__image" src="img/logo-footer.svg" alt="Smart Device Логотип" width="191" height="38">
@@ -280,7 +307,7 @@
         <a href="#" class="footer__link footer__link--size-big">Developed by wow studio</a>
       </div>
     </div>
-  </footer>
+  </footer> -->
   <script src="/js/script.js"></script>
 </body>
 
