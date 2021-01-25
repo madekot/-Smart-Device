@@ -91,11 +91,43 @@
   }
 
   .advantages__item h3 {
-    margin-top: 5px;
+    margin-top: 8px;
   }
 
-  p {
+  .advantages__item p {
+    margin-top: 9px;
+  }
+
+  .advantages__item-size-big {
+    padding-top: 27px;
+  }
+
+  .advantages__item-size-big h3 {
     margin-top: 11px;
+  }
+
+  .advantages__item-size-big p {
+    margin-top: 13px;
+  }
+
+  .advantages__item--icon-masquerade svg {
+    width: 30px;
+    height: 26px;
+  }
+
+  .advantages__item--icon-clock svg {
+    width: 29px;
+    height: 36px;
+  }
+
+  .advantages__item--icon-people svg {
+    width: 31px;
+    height: 32px;
+  }
+
+  .advantages__item--icon-price-tag svg {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -118,26 +150,6 @@
 
   .advantages__item svg {
     display: block;
-  }
-
-  .advantages__item--icon-clock svg {
-    width: 29.28px;
-    height: 36px;
-  }
-
-  .advantages__item--icon-people svg {
-    width: 31.61px;
-    height: 32px;
-  }
-
-  .advantages__item--icon-masquerade svg {
-    width: 30.2px;
-    height: 26px;
-  }
-
-  .advantages__item--icon-price-tag svg {
-    width: 32.18px;
-    height: 32px;
   }
 
   .advantages__item h3 {
