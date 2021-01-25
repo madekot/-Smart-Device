@@ -161,6 +161,10 @@
     // width: 290px;
   }
 
+  .callback__name-field {
+    width: 100%;
+  }
+
   .callback__lead {
     font-size: 28px;
     line-height: 39px;
@@ -187,7 +191,7 @@
   }
 
   .callback__submit-button {
-    flex-grow: 1;
+    width: 100%;
 
     margin-top: 34px;
   }
