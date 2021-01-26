@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Smart Device</title>
+  <link rel="preload" href="fonts/pt-mono-v8-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-700.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/roboto-condensed-v19-latin_cyrillic-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,7 +18,7 @@
       <header class="main-screen__wrap-top header">
         <nav class="header__nav">
           <a class="header__logo logo">
-            <img class="logo__image" src="img/logo-header.svg" alt="Smart Device Логотип" width="191" height="38">
+            <img class="logo__image" src="img/logo-header.svg" alt="Smart Device Логотип" width="191" height="38" loading="lazy">
           </a>
           <ul class="header__site-list site-list">
             <li class="site-list__item site-list__item--icon-mail">
@@ -177,7 +180,7 @@
   <footer class="footer footer--nojs">
     <div class="footer__content">
       <a class="footer__logo logo logo--image-full">
-        <img class="logo__image" src="img/logo-footer.svg" alt="Smart Device Логотип" width="191" height="38">
+        <img class="logo__image" src="img/logo-footer.svg" alt="Smart Device Логотип" width="191" height="38" loading="lazy">
       </a>
       <ul class="footer__social social-list">
         <li class="social-list__item">
@@ -268,7 +271,7 @@
   </footer>
   <div class="popup">
     <button class="popup__close button button--color">
-      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" loading="lazy">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.146522 0.853553C-0.04874 0.658291 -0.04874 0.341709 0.146522 0.146447C0.341784 -0.0488155 0.658367 -0.0488156 0.853629 0.146447L8.27821 7.57103L15.7028 0.14645C15.8981 -0.0488124 16.2146 -0.0488125 16.4099 0.14645C16.6052 0.341712 16.6052 0.658294 16.4099 0.853556L8.98532 8.27814L16.41 15.7028C16.6052 15.8981 16.6052 16.2146 16.41 16.4099C16.2147 16.6052 15.8981 16.6052 15.7029 16.4099L8.27821 8.98525L0.853553 16.4099C0.658291 16.6052 0.341709 16.6052 0.146447 16.4099C-0.0488155 16.2146 -0.0488156 15.8981 0.146447 15.7028L7.57111 8.27814L0.146522 0.853553Z" fill="currentColor"></path>
       </svg>
       <span class="visually-hidden">закрыть</span>
