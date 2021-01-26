@@ -1,5 +1,4 @@
 .callback {
-  // width: 574px;
   color: #ffffff;
   background-color: #00b2ff;
 }
@@ -35,13 +34,11 @@
 }
 
 .callback__name-field {
-  // width: 50%;
   flex-grow: 1;
 }
 
 .callback__phone-field {
   flex-grow: 1;
-  // width: calc(50% - 31px);
 
   margin-left: 31px;
 }
@@ -53,7 +50,6 @@
 }
 
 .callback__submit-button {
-  // width: 50%;
   min-width: 270px;
   margin-top: 45px;
 }
@@ -66,10 +62,6 @@
 }
 
 @media (max-width: 1023px) {
-  .callback {
-    // width: 595px;
-  }
-
   .callback__lead {
     font-size: 32px;
     line-height: 45px;
@@ -100,10 +92,6 @@
 }
 
 @media (max-width: 767px) {
-  .callback {
-    // width: 290px;
-  }
-
   .callback__name-field {
     width: 100%;
   }
