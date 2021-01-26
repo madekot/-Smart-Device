@@ -1,4 +1,25 @@
 .popup {
+  position: fixed;
+
+  width: 100vw;
+  height: 100%;
+
+  background-color: rgba(#000000, 0.7);
+}
+
+.popup--hide {
+  display: none;
+}
+
+.popup__wrap-content {
+  position: absolute;
+  top: 136px;
+  left: 50%;
+
+  transform: translate(-50%);
+}
+
+.popup__content {
   position: relative;
 
   max-width: 490px;
