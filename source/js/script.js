@@ -40,4 +40,98 @@
     });
   }
 
+  // START: открывает / закрывает модалку по клику или с клавиатуры
+  var ESCCAPE_KEYCODE = 27;
+  var REMOVE_ANIMATION_MILLISECOND = 1000;
+
+  var callBackButtonElement = document.querySelector('.site-list__button--js');
+  var popupElement = document.querySelector('.popup');
+  var popupContentElement = popupElement.querySelector('.popup__content');
+  var closePopupButtonElement = popupElement.querySelector('.popup__close');
+  var submitPopupButtonElement = popupElement.querySelector('.popup__submit-button');
+  var inputNamePopupElement = popupElement.querySelector('.popup__name-field--name-js input');
+  var inputPhonePopupElement = popupElement.querySelector('.popup__form-field--phone-js input');
+  var textareaQuestionPopupElement = popupElement.querySelector('.popup__form-field--question-js textarea');
+  var inputCheckboxQuestionPopupElement = popupElement.querySelector('.popup__checkbox-field--js input');
+
+
+  submitPopupButtonElement.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (!inputNamePopupElement.value || !inputPhonePopupElement.value || !textareaQuestionPopupElement.value || !inputCheckboxQuestionPopupElement.checked) {
+      popupContentElement.classList.add('popup__content--error');
+      setTimeout(function(){
+        popupContentElement.classList.remove('popup__content--error');
+      }, REMOVE_ANIMATION_MILLISECOND)
+    } else {
+      writeStorage(isStorageSupport);
+    }
+  });
+
+  var openPopup = function (evt) {
+    evt.preventDefault();
+    popupElement.classList.remove('popup--hide');
+    readStorage(isStorageSupport);
+  };
+
+  var closePopup = function (evt) {
+    evt.preventDefault();
+    popupElement.classList.add('popup--hide');
+    document.removeEventListener('keydown', onPopupEscKeyDown);
+    popupElement.removeEventListener('click', onPopupClick);
+  };
+
+  callBackButtonElement.addEventListener('click', function (evt) {
+    openPopup(evt);
+    document.addEventListener('keydown', onPopupEscKeyDown);
+    popupElement.addEventListener('click', onPopupClick);
+  });
+
+  closePopupButtonElement.addEventListener('click', function (evt) {
+    closePopup(evt);
+  });
+
+  var onPopupEscKeyDown = function (evt) {
+    if (evt.keyCode === ESCCAPE_KEYCODE) {
+      closePopup(evt);
+    }
+  };
+
+  var onPopupClick = function (evt) {
+    if (evt.target === popupElement) {
+      closePopup(evt);
+    }
+  }
+  // END: открывает / закрывает модалку по клику или с клавиатуры
+
+  // START: реализует хранение данных в localStorage
+  var isStorageSupport = true;
+  var storageName = '';
+  var storagePhone = '';
+  var storageMessage = '';
+
+  try {
+    storageName = localStorage.getItem('name');
+    storagePhone = localStorage.getItem('phone');
+    storageMessage = localStorage.getItem('message');
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  var readStorage = function (isStorageSupport) {
+    if (isStorageSupport) {
+      inputNamePopupElement.value = storageName;
+      inputPhonePopupElement.value = storagePhone;
+      textareaQuestionPopupElement.value = storageMessage;
+    } else {
+      inputNamePopupElement.focus();
+    }
+  };
+
+  var writeStorage = function (isStorageSupport) {
+    if (isStorageSupport) {
+      localStorage.setItem("name", inputNamePopupElement.value);
+      localStorage.setItem("phone", inputPhonePopupElement.value);
+      localStorage.setItem("message", textareaQuestionPopupElement.value);
+    }
+  };
 })();
