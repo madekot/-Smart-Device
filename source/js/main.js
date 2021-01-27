@@ -173,7 +173,7 @@
     mainWrapperForm.scrollIntoView({
       behavior: 'smooth',
     });
-  })
+  });
 
   var mainScreenLink = document.querySelector('.main-screen__link');
   var mainWrapper = document.querySelector('.main__wrapper');
@@ -182,6 +182,6 @@
     mainWrapper.scrollIntoView({
       behavior: 'smooth',
     });
-  })
+  });
   // END: плавная прокрутка по клику на ссылки
 })();
