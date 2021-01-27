@@ -8,11 +8,15 @@
 
 .main__wrapper {
   max-width: 1218px;
-  margin-top: 109px;
+  // margin-top: 109px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 25px;
   padding-left: 25px;
+}
+
+.main__advantages {
+  padding-top: 109px;
 }
 
 .main__about-company {
@@ -80,8 +84,12 @@
     background-position: top 242px right;
   }
 
-  .main__wrapper {
-    margin-top: 54px;
+  .main__advantages {
+    padding-top: 54px;
+  }
+
+  .main__advantages {
+    padding-top: 109px;
   }
 
   .main__about-company {
@@ -131,9 +139,12 @@
   }
 
   .main__wrapper {
-    margin-top: 37px;
     padding-right: 15px;
     padding-left: 15px;
+  }
+
+ .main__advantages {
+    padding-top: 37px;
   }
 
   .main__wrapper-form {

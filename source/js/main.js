@@ -169,4 +169,24 @@
     }
   });
   // END: реализует валидацию поля телефона при помощи плагина IMask + при фокусе +7
+
+  // START: плавная прокрутка по клику на ссылки
+  var mainScreenButton = document.querySelector('.main-screen__button');
+  var mainWrapperForm = document.querySelector('.main__wrapper-form');
+  mainScreenButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    mainWrapperForm.scrollIntoView({
+      behavior: 'smooth',
+    });
+  })
+
+  var mainScreenLink = document.querySelector('.main-screen__link');
+  var mainWrapper = document.querySelector('.main__wrapper');
+  mainScreenLink.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    mainWrapper.scrollIntoView({
+      behavior: 'smooth',
+    });
+  })
+  // END: плавная прокрутка по клику на ссылки
 })();
