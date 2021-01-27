@@ -42,13 +42,8 @@
 
   // START: открывает / закрывает модалку по клику или с клавиатуры
   var ESCCAPE_KEYCODE = 27;
-  // var BACKSPACE_KEYCODE = 8;
-  // var DELETE_KEYCODE = 46;
-  // var ARROW_LEFT = 37;
-  // var ARROW_RIGHT = 39;
   var REMOVE_ANIMATION_MILLISECOND = 1000;
   var MIN_LENGTH_PHONE = 3;
-
 
   var callBackButtonElement = document.querySelector('.header__button--js');
   var popupElement = document.querySelector('.popup');
@@ -60,7 +55,6 @@
   var inputPhonePopupElement = popupElement.querySelector('.popup__form-field--phone-js input');
   var textareaQuestionPopupElement = popupElement.querySelector('.popup__form-field--question-js textarea');
   var inputCheckboxQuestionPopupElement = popupElement.querySelector('.popup__checkbox-field--js input');
-
 
   submitPopupButtonElement.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -136,11 +130,12 @@
 
   var readStorage = function (storageSupport) {
     if (storageSupport) {
+      if (!storageName) {
+        inputNamePopupElement.focus();
+      }
       inputNamePopupElement.value = storageName;
       inputPhonePopupElement.value = storagePhone;
       textareaQuestionPopupElement.value = storageMessage;
-    } else {
-      inputNamePopupElement.focus();
     }
   };
 
