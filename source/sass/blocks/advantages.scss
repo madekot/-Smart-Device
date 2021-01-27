@@ -67,10 +67,11 @@
 
 .advantages__item svg {
   display: block;
+
   color: #00b2ff;
 }
 
-.advantages__item:hover svg  {
+.advantages__item:hover svg {
   color: #ffffff;
 }
 
@@ -143,11 +144,11 @@
   }
 
   .advantages__item {
+    min-height: 236px;
     padding-top: 22px;
     padding-right: 10px;
     padding-bottom: 25px;
     padding-left: 28px;
-    min-height: 236px;
   }
 
   .advantages__item-size-big p {

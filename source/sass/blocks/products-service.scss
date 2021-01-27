@@ -132,10 +132,11 @@
   }
 
   .products-service__list {
+    margin-top: 49px;
+
     grid-template-columns: minmax(715px, auto);
     grid-auto-rows: minmax(256px, auto);
     grid-gap: 46px;
-    margin-top: 49px;
   }
 
   .products-service__item--image-production .products-service__item-link {
