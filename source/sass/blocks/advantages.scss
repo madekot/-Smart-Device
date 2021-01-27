@@ -67,10 +67,11 @@
 
 .advantages__item svg {
   display: block;
+  color: #00b2ff;
 }
 
-.advantages__item:hover path {
-  fill: #ffffff;
+.advantages__item:hover svg  {
+  color: #ffffff;
 }
 
 .advantages__item br {
