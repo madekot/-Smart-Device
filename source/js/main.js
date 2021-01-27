@@ -42,11 +42,12 @@
 
   // START: открывает / закрывает модалку по клику или с клавиатуры
   var ESCCAPE_KEYCODE = 27;
-  var BACKSPACE_KEYCODE = 8;
-  var DELETE_KEYCODE = 46;
+  // var BACKSPACE_KEYCODE = 8;
+  // var DELETE_KEYCODE = 46;
   // var ARROW_LEFT = 37;
   // var ARROW_RIGHT = 39;
   var REMOVE_ANIMATION_MILLISECOND = 1000;
+  var MIN_LENGTH_PHONE = 3;
 
 
   var callBackButtonElement = document.querySelector('.header__button--js');
@@ -65,9 +66,9 @@
     evt.preventDefault();
     if (!inputNamePopupElement.value || !inputPhonePopupElement.value || !textareaQuestionPopupElement.value || !inputCheckboxQuestionPopupElement.checked) {
       popupContentElement.classList.add('popup__content--error');
-      setTimeout(function(){
+      setTimeout(function () {
         popupContentElement.classList.remove('popup__content--error');
-      }, REMOVE_ANIMATION_MILLISECOND)
+      }, REMOVE_ANIMATION_MILLISECOND);
     } else {
       writeStorage(isStorageSupport);
     }
@@ -108,15 +109,15 @@
     if (evt.target === popupElement) {
       closePopup(evt);
     }
-  }
+  };
 
   var blockScrolling = function () {
     bodyElement.style.overflow = 'hidden';
-  }
+  };
 
   var unblockScrolling = function () {
     bodyElement.style.overflow = 'auto';
-  }
+  };
   // END: открывает / закрывает модалку по клику или с клавиатуры
 
   // START: реализует хранение данных в localStorage
@@ -133,8 +134,8 @@
     isStorageSupport = false;
   }
 
-  var readStorage = function (isStorageSupport) {
-    if (isStorageSupport) {
+  var readStorage = function (storageSupport) {
+    if (storageSupport) {
       inputNamePopupElement.value = storageName;
       inputPhonePopupElement.value = storagePhone;
       textareaQuestionPopupElement.value = storageMessage;
@@ -143,42 +144,28 @@
     }
   };
 
-  var writeStorage = function (isStorageSupport) {
-    if (isStorageSupport) {
-      localStorage.setItem("name", inputNamePopupElement.value);
-      localStorage.setItem("phone", inputPhonePopupElement.value);
-      localStorage.setItem("message", textareaQuestionPopupElement.value);
+  var writeStorage = function (storageSupport) {
+    if (storageSupport) {
+      localStorage.setItem('name', inputNamePopupElement.value);
+      localStorage.setItem('phone', inputPhonePopupElement.value);
+      localStorage.setItem('message', textareaQuestionPopupElement.value);
     }
   };
   // END: реализует хранение данных в localStorage
 
-  // START: реализует валидацию поля телефона
-
-  var isKeyNumber = function (key) {
-    return !isNaN(parseInt(key))
-  };
-
-  var isDeleteKey = function (keyCode) {
-    return !(keyCode !== BACKSPACE_KEYCODE &&
-    keyCode !== DELETE_KEYCODE)
-  };
-
-
   // START: реализует валидацию поля телефона при помощи плагина IMask + при фокусе +7
-  var phoneMask = IMask(
-    inputPhonePopupElement, {
-    mask: '+{7}(000)000-00-00'
-  });
+  // eslint-disable-next-line
+  window.IMask(inputPhonePopupElement, {mask: '+{7} (000) 000-00-00'}); //используется плагин
 
-  inputPhonePopupElement.addEventListener('focus', function() {
-    if (inputPhonePopupElement.value.length < 3) {
-      inputPhonePopupElement.value = '+7('
+  inputPhonePopupElement.addEventListener('focus', function () {
+    if (inputPhonePopupElement.value.length < MIN_LENGTH_PHONE) {
+      inputPhonePopupElement.value = '+7 (';
     }
   });
 
   inputPhonePopupElement.addEventListener('blur', function () {
-    if (inputPhonePopupElement.value === '+7(' || inputPhonePopupElement.value.length <= 3) {
-      inputPhonePopupElement.value = ''
+    if (inputPhonePopupElement.value === '+7 (' || inputPhonePopupElement.value.length <= MIN_LENGTH_PHONE) {
+      inputPhonePopupElement.value = '';
     }
   });
   // END: реализует валидацию поля телефона при помощи плагина IMask + при фокусе +7
