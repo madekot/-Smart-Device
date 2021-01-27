@@ -46,6 +46,7 @@
 
   var callBackButtonElement = document.querySelector('.site-list__button--js');
   var popupElement = document.querySelector('.popup');
+  var bodyElement = document.querySelector('body');
   var popupContentElement = popupElement.querySelector('.popup__content');
   var closePopupButtonElement = popupElement.querySelector('.popup__close');
   var submitPopupButtonElement = popupElement.querySelector('.popup__submit-button');
@@ -70,12 +71,14 @@
   var openPopup = function (evt) {
     evt.preventDefault();
     popupElement.classList.remove('popup--hide');
+    blockScrolling();
     readStorage(isStorageSupport);
   };
 
   var closePopup = function (evt) {
     evt.preventDefault();
     popupElement.classList.add('popup--hide');
+    unblockScrolling();
     document.removeEventListener('keydown', onPopupEscKeyDown);
     popupElement.removeEventListener('click', onPopupClick);
   };
@@ -100,6 +103,14 @@
     if (evt.target === popupElement) {
       closePopup(evt);
     }
+  }
+
+  var blockScrolling = function () {
+    bodyElement.style.overflow = 'hidden';
+  }
+
+  var unblockScrolling = function () {
+    bodyElement.style.overflow = 'auto';
   }
   // END: открывает / закрывает модалку по клику или с клавиатуры
 
