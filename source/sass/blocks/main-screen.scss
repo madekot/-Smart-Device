@@ -75,6 +75,18 @@
   line-height: 34px;
 }
 
+.main-screen__description::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+
+  width: 66px;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
 .main-screen__button {
   align-self: flex-start;
 
@@ -156,6 +168,12 @@
 
     font-size: 18px;
     line-height: 28px;
+  }
+
+  .main-screen__description::before {
+    top: 15px;
+
+    width: 33px;
   }
 
   .main-screen__button {

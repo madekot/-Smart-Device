@@ -59,6 +59,10 @@
   background-image: url("../img/icon-mail.svg");
 }
 
+.site-list__text {
+  margin-left: 20px;
+}
+
 @media (max-width: 1023px) {
   .site-list__item a::before {
     width: 24px;

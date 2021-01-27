@@ -42,9 +42,14 @@
 
   // START: открывает / закрывает модалку по клику или с клавиатуры
   var ESCCAPE_KEYCODE = 27;
+  var BACKSPACE_KEYCODE = 8;
+  var DELETE_KEYCODE = 46;
+  // var ARROW_LEFT = 37;
+  // var ARROW_RIGHT = 39;
   var REMOVE_ANIMATION_MILLISECOND = 1000;
 
-  var callBackButtonElement = document.querySelector('.site-list__button--js');
+
+  var callBackButtonElement = document.querySelector('.header__button--js');
   var popupElement = document.querySelector('.popup');
   var bodyElement = document.querySelector('body');
   var popupContentElement = popupElement.querySelector('.popup__content');
@@ -145,4 +150,36 @@
       localStorage.setItem("message", textareaQuestionPopupElement.value);
     }
   };
+  // END: реализует хранение данных в localStorage
+
+  // START: реализует валидацию поля телефона
+
+  var isKeyNumber = function (key) {
+    return !isNaN(parseInt(key))
+  };
+
+  var isDeleteKey = function (keyCode) {
+    return !(keyCode !== BACKSPACE_KEYCODE &&
+    keyCode !== DELETE_KEYCODE)
+  };
+
+
+  // START: реализует валидацию поля телефона при помощи плагина IMask + при фокусе +7
+  var phoneMask = IMask(
+    inputPhonePopupElement, {
+    mask: '+{7}(000)000-00-00'
+  });
+
+  inputPhonePopupElement.addEventListener('focus', function() {
+    if (inputPhonePopupElement.value.length < 3) {
+      inputPhonePopupElement.value = '+7('
+    }
+  });
+
+  inputPhonePopupElement.addEventListener('blur', function () {
+    if (inputPhonePopupElement.value === '+7(' || inputPhonePopupElement.value.length <= 3) {
+      inputPhonePopupElement.value = ''
+    }
+  });
+  // END: реализует валидацию поля телефона при помощи плагина IMask + при фокусе +7
 })();
