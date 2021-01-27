@@ -108,6 +108,6 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-// gulp.task("build", gulp.series("clean", "images", "webp", "copy", "css", "sprite", "html")); // сборка с минификацией картинок и webp
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "images", "webp", "copy", "css", "sprite", "html")); // сборка с минификацией картинок и webp
+// gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));
