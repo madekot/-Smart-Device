@@ -1,5 +1,4 @@
 .about-company {
-  // max-width: 1168px;
   padding-bottom: 7px;
   padding-left: 180px;
 
@@ -7,7 +6,6 @@
   background-image: url("../img/year-about-us-desktop@1x.jpg");
   background-repeat: no-repeat;
   background-position: top 7px left;
-  // background-size: 114px 304px;
   background-size: contain;
 
   @media (min-resolution: 2dppx) {
@@ -26,9 +24,7 @@
 }
 
 .about-company p {
-  // display: -webkit-box;
   overflow: hidden;
-  // -webkit-box-orient: vertical;
 
   margin-top: 20px;
   margin-bottom: 0;
@@ -36,8 +32,6 @@
   font-family: "PT Mono", "Andale Mono", monospace;
   font-size: 16px;
   line-height: 22px;
-
-  // -webkit-line-clamp: 4;
 }
 
 .about-company__button {
@@ -52,7 +46,6 @@
 
     background-image: url("../img/year-about-us-tablet@1x.jpg");
     background-size: 130px 346px;
-    // background-size: contain;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/year-about-us-tablet@2x.jpg");
@@ -90,7 +83,6 @@
 @media (max-width: 767px) {
   .about-company {
     padding-right: 0;
-    // max-width: 290px;
     padding-left: 0;
 
     background-image: none;
@@ -107,14 +99,10 @@
 
   .about-company p {
     margin-top: 21px;
-
-    // -webkit-line-clamp: 8;
   }
 
   .about-company p + p {
     margin-top: 39px;
-
-    // -webkit-line-clamp: 8;
   }
 
   .about-company__button {
