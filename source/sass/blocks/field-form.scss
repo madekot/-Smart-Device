@@ -21,6 +21,10 @@
   border-radius: 0;
 }
 
+.field-form textarea {
+  resize: none;
+}
+
 .field-form--size-big input,
 .field-form--size-big textarea {
   padding: 14px 24px;
