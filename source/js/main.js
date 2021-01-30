@@ -51,24 +51,19 @@
   var callBackButtonElement = document.querySelector('.header__button--js');
   var popupElement = document.querySelector('.popup');
   var bodyElement = document.querySelector('body');
-  var popupContentElement = popupElement.querySelector('.popup__content');
+  // var popupContentElement = popupElement.querySelector('.popup__content');
   var closePopupButtonElement = popupElement.querySelector('.popup__close');
   var submitPopupButtonElement = popupElement.querySelector('.popup__submit-button');
   var inputNamePopupElement = popupElement.querySelector('.popup__name-field--name-js input');
   var inputPhonePopupElement = popupElement.querySelector('.popup__form-field--phone-js input');
+  var inputPhoneFormElement = document.querySelector('.callback__phone-field--phone-js input');
   var textareaQuestionPopupElement = popupElement.querySelector('.popup__form-field--question-js textarea');
   var inputCheckboxQuestionPopupElement = popupElement.querySelector('.popup__checkbox-field--js input');
 
-  submitPopupButtonElement.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    if (!inputNamePopupElement.value || !inputPhonePopupElement.value || !textareaQuestionPopupElement.value || !inputCheckboxQuestionPopupElement.checked) {
-      popupContentElement.classList.add('popup__content--error');
-      setTimeout(function () {
-        popupContentElement.classList.remove('popup__content--error');
-      }, REMOVE_ANIMATION_MILLISECOND);
-    } else {
-      writeStorage(isStorageSupport);
-    }
+  submitPopupButtonElement.addEventListener('click', function () {
+    // evt.preventDefault();
+    writeStorage(isStorageSupport);
+    // localStorage.clear()
   });
 
   var openPopup = function (evt) {
@@ -154,6 +149,9 @@
   // START: реализует валидацию поля телефона при помощи плагина IMask + при фокусе +7
   // eslint-disable-next-line
   window.IMask(inputPhonePopupElement, {mask: '+{7} (000) 000-00-00'}); //используется плагин
+    // eslint-disable-next-line
+  window.IMask(inputPhoneFormElement, {mask: '+{7} (000) 000-00-00'}); //используется плагин
+
 
   inputPhonePopupElement.addEventListener('focus', function () {
     if (inputPhonePopupElement.value.length < MIN_LENGTH_PHONE) {
