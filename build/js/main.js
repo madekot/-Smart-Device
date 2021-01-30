@@ -1,7 +1,9 @@
 'use strict';
 (function () {
+  // START: открывает / закрывает аккардион в подвале
   var pageFooter = document.querySelector('body > .footer');
   var footerButtons = document.querySelectorAll('.footer__button--togle-js');
+  var footerTabs = pageFooter.querySelectorAll('.footer__sections--js, .footer__contacts--js');
 
   var closeTab = function (button) {
     button.classList.remove('button--close');
@@ -32,13 +34,14 @@
     pageFooter.classList.remove('footer--nojs');
   }
 
-  if (footerButtons) {
-    footerButtons.forEach(function (button) {
-      button.addEventListener('click', function () {
-        changeTabsStates(button);
+  if (footerTabs) {
+    footerTabs.forEach(function (Tab, index) {
+      Tab.addEventListener('click', function () {
+        changeTabsStates(footerButtons[index]);
       });
     });
   }
+  // END: открывает / закрывает аккардион в подвале
 
   // START: открывает / закрывает модалку по клику или с клавиатуры
   var ESCCAPE_KEYCODE = 27;
