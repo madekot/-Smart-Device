@@ -151,7 +151,7 @@
     isStorageSupport = false;
   }
 
-   var readStorage = function (storageSupport) {
+  var readStorage = function (storageSupport) {
     if (storageSupport) {
       inputNamePopupElement.value = storageName;
       inputNameFormElement.value = storageName;
@@ -194,7 +194,7 @@
         fieldElement.value = '';
       }
     });
-  }
+  };
 
   // eslint-disable-next-line
   window.IMask(inputPhonePopupElement, {mask: '+{7} (000) 000-00-00'}); //используется плагин
