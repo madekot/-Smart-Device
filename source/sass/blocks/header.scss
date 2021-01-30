@@ -1,12 +1,12 @@
 .header {
   display: flex;
   align-items: flex-start;
-  flex-wrap: wrap;
 }
 
 .header__nav {
   display: flex;
   flex-grow: 1;
+  justify-content: space-between;
 }
 
 .header__button {
@@ -23,7 +23,7 @@
 
 .header__site-list {
   min-width: 433px;
-  margin-left: auto;
+  margin-left: 50px;
 }
 
 @media (max-width: 1023px) {
