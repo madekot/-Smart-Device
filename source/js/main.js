@@ -45,25 +45,35 @@
 
   // START: открывает / закрывает модалку по клику или с клавиатуры
   var ESCCAPE_KEYCODE = 27;
-  var REMOVE_ANIMATION_MILLISECOND = 1000;
   var MIN_LENGTH_PHONE = 3;
 
   var callBackButtonElement = document.querySelector('.header__button--js');
   var popupElement = document.querySelector('.popup');
   var bodyElement = document.querySelector('body');
-  // var popupContentElement = popupElement.querySelector('.popup__content');
+  var popupFormElement = popupElement.querySelector('.popup__form');
   var closePopupButtonElement = popupElement.querySelector('.popup__close');
-  var submitPopupButtonElement = popupElement.querySelector('.popup__submit-button');
   var inputNamePopupElement = popupElement.querySelector('.popup__name-field--name-js input');
   var inputPhonePopupElement = popupElement.querySelector('.popup__form-field--phone-js input');
-  var inputPhoneFormElement = document.querySelector('.callback__phone-field--phone-js input');
   var textareaQuestionPopupElement = popupElement.querySelector('.popup__form-field--question-js textarea');
   var inputCheckboxQuestionPopupElement = popupElement.querySelector('.popup__checkbox-field--js input');
 
-  submitPopupButtonElement.addEventListener('click', function () {
-    // evt.preventDefault();
-    writeStorage(isStorageSupport);
-    // localStorage.clear()
+  var callbackForm = document.querySelector('.callback__form');
+  var inputNameFormElement = document.querySelector('.callback__name-field--js input');
+  var inputPhoneFormElement = document.querySelector('.callback__phone-field--phone-js input');
+  var textareaQuestionFormElement = document.querySelector('.callback__question-field--js textarea');
+
+  document.addEventListener('DOMContentLoaded', function () {
+    readStorage(isStorageSupport);
+    // localStorage.clear();
+  });
+
+  popupFormElement.addEventListener('submit', function () {
+    writeStorage(isStorageSupport, popupFormElement);
+    selectFieldFocus();
+  });
+
+  callbackForm.addEventListener('submit', function () {
+    writeStorage(isStorageSupport, callbackForm);
   });
 
   var openPopup = function (evt) {
@@ -81,8 +91,23 @@
     popupElement.removeEventListener('click', onPopupClick);
   };
 
+  var selectFieldFocus = function () {
+    if (!inputCheckboxQuestionPopupElement.checked) {
+      inputCheckboxQuestionPopupElement.focus();
+    }
+
+    if (!textareaQuestionPopupElement.value) {
+      textareaQuestionPopupElement.focus();
+    }
+
+    if (!inputNamePopupElement.value) {
+      inputNamePopupElement.focus();
+    }
+  };
+
   callBackButtonElement.addEventListener('click', function (evt) {
     openPopup(evt);
+    selectFieldFocus();
     document.addEventListener('keydown', onPopupEscKeyDown);
     popupElement.addEventListener('click', onPopupClick);
   });
@@ -126,45 +151,59 @@
     isStorageSupport = false;
   }
 
-  var readStorage = function (storageSupport) {
+   var readStorage = function (storageSupport) {
     if (storageSupport) {
-      if (!storageName) {
-        inputNamePopupElement.focus();
-      }
       inputNamePopupElement.value = storageName;
+      inputNameFormElement.value = storageName;
+
       inputPhonePopupElement.value = storagePhone;
+      inputPhoneFormElement.value = storagePhone;
+
+      textareaQuestionFormElement.value = storageMessage;
       textareaQuestionPopupElement.value = storageMessage;
     }
   };
 
-  var writeStorage = function (storageSupport) {
+  var writeStorage = function (storageSupport, formElement) {
     if (storageSupport) {
-      localStorage.setItem('name', inputNamePopupElement.value);
-      localStorage.setItem('phone', inputPhonePopupElement.value);
-      localStorage.setItem('message', textareaQuestionPopupElement.value);
+      if (formElement === popupFormElement) {
+        localStorage.setItem('name', inputNamePopupElement.value);
+        localStorage.setItem('phone', inputPhonePopupElement.value);
+        localStorage.setItem('message', textareaQuestionPopupElement.value);
+      }
+
+      if (formElement === callbackForm) {
+        localStorage.setItem('name', inputNameFormElement.value);
+        localStorage.setItem('phone', inputPhoneFormElement.value);
+        localStorage.setItem('message', textareaQuestionFormElement.value);
+      }
     }
   };
   // END: реализует хранение данных в localStorage
 
   // START: реализует валидацию поля телефона при помощи плагина IMask + при фокусе +7
+  var addValuePhoneField = function (fieldElement) {
+    fieldElement.addEventListener('focus', function () {
+      if (fieldElement.value.length < MIN_LENGTH_PHONE) {
+        fieldElement.value = '+7 (';
+      }
+    });
+
+    fieldElement.addEventListener('blur', function () {
+      if (fieldElement.value === '+7 (' || fieldElement.value.length <= MIN_LENGTH_PHONE) {
+        fieldElement.value = '';
+      }
+    });
+  }
+
   // eslint-disable-next-line
   window.IMask(inputPhonePopupElement, {mask: '+{7} (000) 000-00-00'}); //используется плагин
-    // eslint-disable-next-line
+  addValuePhoneField(inputPhonePopupElement);
+
+  // eslint-disable-next-line
   window.IMask(inputPhoneFormElement, {mask: '+{7} (000) 000-00-00'}); //используется плагин
-
-
-  inputPhonePopupElement.addEventListener('focus', function () {
-    if (inputPhonePopupElement.value.length < MIN_LENGTH_PHONE) {
-      inputPhonePopupElement.value = '+7 (';
-    }
-  });
-
-  inputPhonePopupElement.addEventListener('blur', function () {
-    if (inputPhonePopupElement.value === '+7 (' || inputPhonePopupElement.value.length <= MIN_LENGTH_PHONE) {
-      inputPhonePopupElement.value = '';
-    }
-  });
-  // END: реализует валидацию поля телефона при помощи плагина IMask + при фокусе +7
+  addValuePhoneField(inputPhoneFormElement);
+  // END: реализует валидацию поля телефона при помощи плагина IMask + при фокусе на поле телефона появляется +7
 
   // START: плавная прокрутка по клику на ссылки
   var mainScreenButton = document.querySelector('.main-screen__button');

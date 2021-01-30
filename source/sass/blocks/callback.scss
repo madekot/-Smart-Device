@@ -50,11 +50,15 @@
 }
 
 .callback__submit-button {
+  order: 5;
+
   min-width: 270px;
   margin-top: 45px;
 }
 
 .callback__checkbox-field {
+  order: 10;
+
   width: calc(50% - 38px);
   max-width: 230px;
   margin-top: 38px;

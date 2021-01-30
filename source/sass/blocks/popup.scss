@@ -76,6 +76,8 @@
 }
 
 .popup__form {
+  display: flex;
+  flex-direction: column;
   margin-top: 33px;
 }
 
@@ -84,11 +86,13 @@
 }
 
 .popup__submit-button {
+  order: 5;
   width: 100%;
   margin-top: 30px;
 }
 
 .popup__checkbox-field {
+  order: 10;
   margin-top: 34px;
 }
 
