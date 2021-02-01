@@ -36,9 +36,11 @@
 
   if (footerTabs) {
     footerTabs.forEach(function (Tab, index) {
-      Tab.addEventListener('click', function () {
-        changeTabsStates(footerButtons[index]);
-      });
+      if (Tab) {
+        Tab.addEventListener('click', function () {
+          changeTabsStates(footerButtons[index]);
+        });
+      }
     });
   }
   // END: открывает / закрывает аккардион в подвале
@@ -67,14 +69,18 @@
     // localStorage.clear();
   });
 
-  popupFormElement.addEventListener('submit', function () {
-    writeStorage(isStorageSupport, popupFormElement);
-    selectFieldFocus();
-  });
+  if (popupFormElement) {
+    popupFormElement.addEventListener('submit', function () {
+      writeStorage(isStorageSupport, popupFormElement);
+      selectFieldFocus();
+    });
+  }
 
-  callbackForm.addEventListener('submit', function () {
-    writeStorage(isStorageSupport, callbackForm);
-  });
+  if (callbackForm) {
+    callbackForm.addEventListener('submit', function () {
+      writeStorage(isStorageSupport, callbackForm);
+    });
+  }
 
   var openPopup = function (evt) {
     evt.preventDefault();
@@ -105,16 +111,20 @@
     }
   };
 
-  callBackButtonElement.addEventListener('click', function (evt) {
-    openPopup(evt);
-    selectFieldFocus();
-    document.addEventListener('keydown', onPopupEscKeyDown);
-    popupElement.addEventListener('click', onPopupClick);
-  });
+  if (callBackButtonElement) {
+    callBackButtonElement.addEventListener('click', function (evt) {
+      openPopup(evt);
+      selectFieldFocus();
+      document.addEventListener('keydown', onPopupEscKeyDown);
+      popupElement.addEventListener('click', onPopupClick);
+    });
+  }
 
-  closePopupButtonElement.addEventListener('click', function (evt) {
-    closePopup(evt);
-  });
+  if (closePopupButtonElement) {
+    closePopupButtonElement.addEventListener('click', function (evt) {
+      closePopup(evt);
+    });
+  }
 
   var onPopupEscKeyDown = function (evt) {
     if (evt.keyCode === ESCCAPE_KEYCODE) {
@@ -183,17 +193,21 @@
 
   // START: реализует валидацию поля телефона при помощи плагина IMask + при фокусе +7
   var addValuePhoneField = function (fieldElement) {
-    fieldElement.addEventListener('focus', function () {
-      if (fieldElement.value.length < MIN_LENGTH_PHONE) {
-        fieldElement.value = '+7 (';
-      }
-    });
+    if (fieldElement) {
+      fieldElement.addEventListener('focus', function () {
+        if (fieldElement.value.length < MIN_LENGTH_PHONE) {
+          fieldElement.value = '+7 (';
+        }
+      });
+    }
 
-    fieldElement.addEventListener('blur', function () {
-      if (fieldElement.value === '+7 (' || fieldElement.value.length <= MIN_LENGTH_PHONE) {
-        fieldElement.value = '';
-      }
-    });
+    if (fieldElement) {
+      fieldElement.addEventListener('blur', function () {
+        if (fieldElement.value === '+7 (' || fieldElement.value.length <= MIN_LENGTH_PHONE) {
+          fieldElement.value = '';
+        }
+      });
+    }
   };
 
   // eslint-disable-next-line
@@ -208,20 +222,26 @@
   // START: плавная прокрутка по клику на ссылки
   var mainScreenButton = document.querySelector('.main-screen__button');
   var mainWrapperForm = document.querySelector('.main__wrapper-form');
-  mainScreenButton.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    mainWrapperForm.scrollIntoView({
-      behavior: 'smooth',
+
+  if (mainScreenButton) {
+    mainScreenButton.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      mainWrapperForm.scrollIntoView({
+        behavior: 'smooth',
+      });
     });
-  });
+  }
 
   var mainScreenLink = document.querySelector('.main-screen__link');
   var mainWrapper = document.querySelector('.main__wrapper');
-  mainScreenLink.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    mainWrapper.scrollIntoView({
-      behavior: 'smooth',
+
+  if (mainScreenLink) {
+    mainScreenLink.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      mainWrapper.scrollIntoView({
+        behavior: 'smooth',
+      });
     });
-  });
+  }
   // END: плавная прокрутка по клику на ссылки
 })();
