@@ -139,11 +139,11 @@
   };
 
   var blockScrolling = function () {
-    bodyElement.style.overflow = 'hidden';
+    document.body.classList.add('page-block-scrolling');
   };
 
   var unblockScrolling = function () {
-    bodyElement.style.overflow = 'auto';
+    document.body.classList.remove('page-block-scrolling');
   };
   // END: открывает / закрывает модалку по клику или с клавиатуры
 
