@@ -51,7 +51,6 @@
 
   var callBackButtonElement = document.querySelector('.header__button--js');
   var popupElement = document.querySelector('.popup');
-  var bodyElement = document.querySelector('body');
   var popupFormElement = popupElement.querySelector('.popup__form');
   var closePopupButtonElement = popupElement.querySelector('.popup__close');
   var inputNamePopupElement = popupElement.querySelector('.popup__name-field--name-js input');
