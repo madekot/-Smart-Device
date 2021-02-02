@@ -3,7 +3,9 @@
 
   padding: 14px;
 
+  cursor: pointer;
   text-align: center;
+  vertical-align: top;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 
@@ -18,7 +20,6 @@
   font-weight: bold;
   font-style: normal;
   line-height: 16px;
-  cursor: pointer;
 }
 
 .button:hover {

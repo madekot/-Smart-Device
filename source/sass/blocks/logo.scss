@@ -15,23 +15,15 @@
   opacity: 0.3;
 }
 
+.logo--image-full .logo__image {
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 767px) {
   .logo {
     width: 38px;
     height: 38px;
-  }
-
-  .logo--image-full {
-    position: static;
-
-    clip-path: none;
-  }
-
-  .logo--image-full .logo__image {
-    position: static;
-
-    width: 100%;
-    height: auto;
   }
 
   .logo__image {

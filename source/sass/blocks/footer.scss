@@ -52,6 +52,7 @@
 
 .footer__contacts {
   margin-left: 50px;
+
   justify-self: flex-end;
   grid-row: 1 / span 2;
   grid-column: -4 / span 3;
@@ -179,8 +180,12 @@
   line-height: 24px;
 }
 
-.footer__text--text-transform-none {
+.footer__text--size {
   text-transform: none;
+  letter-spacing: 0;
+
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .footer__button {
@@ -412,6 +417,8 @@
     width: 16px;
     height: 16px;
     padding: 20px;
+
+    vertical-align: top;
   }
 
   .button--open + .footer__sections-wrap-site-lists {

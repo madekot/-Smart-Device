@@ -21,13 +21,8 @@
           <a class="header__logo logo">
             <!-- 1x 202px 2x 404px, 1x 38px, 2x 76px -->
             <picture>
-              <source type="image/webp" srcset="img/logo-header-mobile@1x.webp 1x, img/logo-header-mobile@2x.webp 2x" media="(max-width: 767px)">
-              <source type="image/webp" srcset="img/logo-header@1x.webp 1x, img/logo-header@2x.webp 2x" media="(max-width: 1023px)">
-              <source type="image/webp" srcset="img/logo-header@1x.webp 1x, img/logo-header@2x.webp 2x">
-
-              <source srcset="img/logo-header-mobile@1x.png 1x, img/logo-header-mobile@2x.png 2x" media="(max-width: 767px)">
-              <source srcset="img/logo-header@1x.png 1x, img/logo-header@2x.png 2x" media="(max-width: 1023px)">
-              <img class="logo__image" src="img/logo-header@1x.png" srcset="img/logo-header@2x.png 2x" alt="Smart Device Логотип" width="191" height="38">
+              <source srcset="img/logo-header-mobile.svg" media="(max-width: 767px)">
+              <img class="logo__image" src="img/logo-header-desktop.svg" alt="Smart Device Логотип" width="202" height="52">
             </picture>
           </a>
           <ul class="header__site-list site-list">
@@ -123,17 +118,32 @@
       <section class="main__products-service products-service">
         <h2 class="products-service__title">Service Device предлагает следующие товары и&nbsp;услуги</h2>
         <ul class="products-service__list">
-          <li class="products-service__item products-service__item--image-production">
+          <li class="products-service__item">
+            <!-- 1x 370px, 2x 740px -->
+            <picture>
+              <source type="image/webp" srcset="img/product-card-1@1x.webp 1x, img/product-card-1@2x.webp 2x">
+              <img src="img/product-card-1@1x.jpg" srcset="img/product-card-1@2x.jpg 2x" alt="" width="370" height="670" loading="lazy">
+            </picture>
             <a class="products-service__item-link" href="#">
               <h3 class="products-service__item-title">Производство печатных плат</h3>
             </a>
           </li>
-          <li class="products-service__item products-service__item--image-mounting">
+          <li class="products-service__item">
+            <!-- 1x 370px, 2x 740px -->
+            <picture>
+              <source type="image/webp" srcset="img/product-card-2@1x.webp 1x, img/product-card-2@2x.webp 2x">
+              <img src="img/product-card-2@1x.jpg" srcset="img/product-card-2@2x.jpg 2x" alt="" width="370" height="670" loading="lazy">
+            </picture>
             <a class="products-service__item-link" href="#">
               <h3 class="products-service__item-title">Монтаж печатных плат</h3>
             </a>
           </li>
-          <li class="products-service__item products-service__item--padding-top-big products-service__item--image-components">
+          <li class="products-service__item products-service__item--padding-top-big">
+            <!-- 1x 370px, 2x 740px -->
+            <picture>
+              <source type="image/webp" srcset="img/product-card-3@1x.webp 1x, img/product-card-3@2x.webp 2x">
+              <img src="img/product-card-3@1x.jpg" srcset="img/product-card-3@2x.jpg 2x" alt="" width="370" height="670" loading="lazy">
+            </picture>
             <a class="products-service__item-link" href="#">
               <h3 class="products-service__item-title">Комплектующие для светотехники</h3>
             </a>
@@ -149,23 +159,24 @@
           <p class="callback__text">Мы проконсультируем Вас бесплатно</p>
           <form action="post" class="callback__form">
             <div class="callback__name-field callback__name-field--js field-form">
-              <input type="text" id="name-field" placeholder="Имя" required="">
               <label class="visually-hidden" for="name-field">Имя</label>
+              <input type="text" id="name-field" placeholder="Имя" required="">
             </div>
             <div class="callback__phone-field callback__phone-field--phone-js field-form">
-              <input type="text" id="tel-field" placeholder="Телефон" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required="">
               <label class="visually-hidden" for="tel-field">Телефон</label>
+              <input type="tel" id="tel-field" placeholder="Телефон" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required="">
             </div>
             <div class="callback__question-field callback__question-field--js field-form">
-              <textarea name="question-field" id="question-field" placeholder="Ваш вопрос"></textarea>
               <label class="visually-hidden" for="question-field">Ваш вопрос</label>
+              <textarea name="question-field" id="question-field" placeholder="Ваш вопрос"></textarea>
             </div>
             <label class="callback__checkbox-field callback__checkbox-field--js checkbox-field" for="checkbox-field-1">
               <span class="checkbox-field__text">Я согласен на обработку персональных данных</span>
               <input type="checkbox" id="checkbox-field-1" required="">
               <span class="checkbox-field__icon"></span>
             </label>
-            <button class="callback__submit-button callback__submit-button--js button" type="submit">Задать вопрос</button>
+            <button class="callback__submit-button callback__submit-button--js button" type="submit">Задать
+              вопрос</button>
           </form>
         </section>
       </div>
@@ -175,10 +186,7 @@
     <div class="footer__content">
       <a class="footer__logo logo logo--image-full">
         <!-- 1x 216px 2x 432px -->
-        <picture>
-          <!-- <source type="image/webp" srcset="img/logo-footer@1x.webp 1x, img/logo-footer@2x.webp 2x"> -->
-          <img class="logo__image" src="img/logo-footer@1x.png" srcset="img/logo-footer@2x.png 2x" alt="Smart Device Логотип" width="216" height="52" loading="lazy">
-        </picture>
+        <img class="logo__image" src="img/logo-footer.svg" alt="Smart Device Логотип" width="216" height="52">
       </a>
       <ul class="footer__social social-list">
         <li class="social-list__item">
@@ -240,7 +248,7 @@
         <div class="footer__sections-wrap-site-lists">
           <ul class="footer__list">
             <li>
-              <p class="footer__text footer__text--text-transform-none">г. Мытищи, Олимпийский проспект,&nbsp;д.10</p>
+              <p class="footer__text footer__text--size">г. Мытищи, Олимпийский проспект,&nbsp;д.10</p>
             </li>
             <li>
               <a href="tel:+74955894050" class="footer__link">+7 (495) 589-40-50</a>
@@ -273,20 +281,20 @@
         <p class="popup__text">Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
         <form action="post" class="popup__form">
           <div class="popup__name-field popup__name-field--name-js field-form field-form--size-big">
-            <input type="text" id="popup-name-field" placeholder="Имя" required="">
             <label class="visually-hidden" for="popup-name-field">Имя</label>
+            <input type="text" id="popup-name-field" placeholder="Имя" required="">
           </div>
           <div class="popup__form-field popup__form-field--phone-js field-form field-form--size-big">
-            <input type="tel" id="popup-tel-field" placeholder="Телефон" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required="">
             <label class="visually-hidden" for="popup-tel-field">Телефон</label>
+            <input type="tel" id="popup-tel-field" placeholder="Телефон" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required="">
           </div>
           <div class="popup__form-field popup__form-field--question-js popup__form-field--textarea field-form field-form--size-big">
-            <textarea name="popup-question-field" id="popup-question-field" placeholder="Ваш вопрос"></textarea>
             <label class="visually-hidden" for="popup-question-field">Ваш вопрос</label>
+            <textarea name="popup-question-field" id="popup-question-field" placeholder="Ваш вопрос"></textarea>
           </div>
           <label class="popup__checkbox-field popup__checkbox-field--js checkbox-field checkbox-field--align-start" for="checkbox-field-2">
-          <span class="checkbox-field__text checkbox-field__text--size-smal">Я согласен на обработку персональных
-            данных</span>
+            <span class="checkbox-field__text checkbox-field__text--size-smal">Я согласен на обработку персональных
+              данных</span>
             <input type="checkbox" id="checkbox-field-2" required="">
             <span class="checkbox-field__icon checkbox-field__icon--size-big"></span>
           </label>
