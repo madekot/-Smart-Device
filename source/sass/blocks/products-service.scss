@@ -32,16 +32,25 @@
 
 .products-service__item {
   position: relative;
-  overflow: hidden;
+
   display: flex;
+  overflow: hidden;
 }
+
+.products-service__item:nth-child(3n+1) img {
+  height: 117%;
+}
+
+.products-service__item:nth-child(3n+2) img {
+  height: 108%;
+}
+
 
 .products-service__item-link {
   position: relative;
   z-index: 20;
 
   display: flex;
-  // overflow: hidden;
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
@@ -49,29 +58,28 @@
   padding: 50px 44px;
 
   color: #ffffff;
-  // background-image: url("../img/bg-product-card-1-desktop@1x.jpg");
-  // background-repeat: no-repeat;
-  // background-position: center top;
-  // background-size: cover;
 
   font-size: 20px;
   font-weight: normal;
   font-style: normal;
   line-height: 30px;
-
-  // @media (min-resolution: 2dppx) {
-  //   background-image: url("../img/bg-product-card-1-desktop@2x.jpg");
-  // }
 }
 
 .products-service__item img {
   position: absolute;
+  top: 50%;
   left: 0;
-  top: 0;
 
   width: 100%;
-  max-width: 100%;
-  height: auto;
+  max-width: none;
+  height: 100%;
+
+  transform: translateY(-50%);
+
+  opacity: 0.2;
+
+  filter: saturate(0);
+  object-fit: cover;
 }
 
 .products-service__item-link:hover {
@@ -101,30 +109,6 @@
   background-position: center center;
 }
 
-// .products-service__item--image-production .products-service__item-link {
-//   background-image: url("../img/bg-product-card-1-desktop@1x.jpg");
-
-//   @media (min-resolution: 2dppx) {
-//     background-image: url("../img/bg-product-card-1-desktop@2x.jpg");
-//   }
-// }
-
-// .products-service__item--image-mounting .products-service__item-link {
-//   background-image: url("../img/bg-product-card-2-desktop@1x.jpg");
-
-//   @media (min-resolution: 2dppx) {
-//     background-image: url("../img/bg-product-card-2-desktop@2x.jpg");
-//   }
-// }
-
-// .products-service__item--image-components .products-service__item-link {
-//   background-image: url("../img/bg-product-card-3-desktop@1x.jpg");
-
-//   @media (min-resolution: 2dppx) {
-//     background-image: url("../img/bg-product-card-3-desktop@2x.jpg");
-//   }
-// }
-
 .products-service__item-title {
   max-width: 160px;
   margin-top: 0;
@@ -152,29 +136,24 @@
     grid-gap: 46px;
   }
 
-  // .products-service__item--image-production .products-service__item-link {
-  //   background-image: url("../img/bg-product-card-1-tablet@1x.jpg");
+  .products-service__item:nth-child(3n+1) img {
+    min-width: 804px;
+  }
 
-  //   @media (min-resolution: 2dppx) {
-  //     background-image: url("../img/bg-product-card-1-tablet@2x.jpg");
-  //   }
-  // }
+  .products-service__item:nth-child(3n+2) img {
+    min-width: 1969px;
+  }
 
-  // .products-service__item--image-mounting .products-service__item-link {
-  //   background-image: url("../img/bg-product-card-2-tablet@1x.jpg");
+  .products-service__item:nth-child(3n+3) img {
+    min-width: 1206px;
+  }
 
-  //   @media (min-resolution: 2dppx) {
-  //     background-image: url("../img/bg-product-card-2-tablet@2x.jpg");
-  //   }
-  // }
+  .products-service__item img {
+    top: 50%;
+    left: 50%;
 
-  // .products-service__item--image-components .products-service__item-link {
-  //   background-image: url("../img/bg-product-card-3-tablet@1x.jpg");
-
-  //   @media (min-resolution: 2dppx) {
-  //     background-image: url("../img/bg-product-card-3-tablet@2x.jpg");
-  //   }
-  // }
+    transform: translate(-50%, -50%);
+  }
 
   .products-service__item--padding-top-big .products-service__item-link {
     padding-top: 51px;
@@ -208,27 +187,15 @@
     padding-top: 32px;
   }
 
-  // .products-service__item--image-production .products-service__item-link {
-  //   background-image: url("../img/bg-product-card-1-mobile@1x.jpg");
+  .products-service__item:nth-child(3n+1) img {
+    min-width: 326px;
+  }
 
-  //   @media (min-resolution: 2dppx) {
-  //     background-image: url("../img/bg-product-card-1-mobile@2x.jpg");
-  //   }
-  // }
+  .products-service__item:nth-child(3n+2) img {
+    min-width: 793px;
+  }
 
-  // .products-service__item--image-mounting .products-service__item-link {
-  //   background-image: url("../img/bg-product-card-2-mobile@1x.jpg");
-
-  //   @media (min-resolution: 2dppx) {
-  //     background-image: url("../img/bg-product-card-2-mobile@2x.jpg");
-  //   }
-  // }
-
-  // .products-service__item--image-components .products-service__item-link {
-  //   background-image: url("../img/bg-product-card-3-mobile@1x.jpg");
-
-  //   @media (min-resolution: 2dppx) {
-  //     background-image: url("../img/bg-product-card-3-mobile@2x.jpg");
-  //   }
-  // }
+  .products-service__item:nth-child(3n+3) img {
+    min-width: 486px;
+  }
 }
