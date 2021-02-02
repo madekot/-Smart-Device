@@ -180,8 +180,12 @@
   line-height: 24px;
 }
 
-.footer__text--text-transform-none {
+.footer__text--size {
   text-transform: none;
+  letter-spacing: 0;
+
+  font-size: 15px;
+  line-height: 25px;
 }
 
 .footer__button {
