@@ -58,10 +58,10 @@
   var textareaQuestionPopupElement = popupElement.querySelector('.popup__form-field--question-js textarea');
   var inputCheckboxQuestionPopupElement = popupElement.querySelector('.popup__checkbox-field--js input');
 
-  var callbackForm = document.querySelector('.callback__form');
-  var inputNameFormElement = document.querySelector('.callback__name-field--js input');
-  var inputPhoneFormElement = document.querySelector('.callback__phone-field--phone-js input');
-  var textareaQuestionFormElement = document.querySelector('.callback__question-field--js textarea');
+  var callbackForm = document.querySelector('.callback form');
+  var inputNameFormElement = document.querySelector('#name-field');
+  var inputPhoneFormElement = document.querySelector('#tel-field');
+  var textareaQuestionFormElement = document.querySelector('#question-field');
 
   document.addEventListener('DOMContentLoaded', function () {
     readStorage(isStorageSupport);
