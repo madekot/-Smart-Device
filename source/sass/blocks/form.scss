@@ -3,6 +3,20 @@
   flex-wrap: wrap;
 }
 
+.form--popup form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 33px;
+}
+
+.form--popup .form__field + .form__field {
+  margin-top: 30px;
+}
+
+.form--popup .form__field:nth-of-type(3n+2) {
+  margin-left: 0;
+}
+
 .form__field {
   display: flex;
   flex-grow: 1;
@@ -27,6 +41,16 @@
   font-weight: normal;
   font-style: normal;
   line-height: 22px;
+}
+
+.form--popup input, // модификатор
+.form--popup textarea {
+  padding: 14px 24px;
+}
+
+.form--popup textarea {
+  padding: 14px 24px;
+  min-height: 107px;
 }
 
 .form__field textarea {

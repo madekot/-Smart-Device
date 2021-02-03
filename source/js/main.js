@@ -51,11 +51,11 @@
 
   var callBackButtonElement = document.querySelector('.header__button--js');
   var popupElement = document.querySelector('.popup');
-  var popupFormElement = popupElement.querySelector('.popup__form');
+  var popupFormElement = popupElement.querySelector('form');
   var closePopupButtonElement = popupElement.querySelector('.popup__close');
-  var inputNamePopupElement = popupElement.querySelector('.popup__name-field--name-js input');
-  var inputPhonePopupElement = popupElement.querySelector('.popup__form-field--phone-js input');
-  var textareaQuestionPopupElement = popupElement.querySelector('.popup__form-field--question-js textarea');
+  var inputNamePopupElement = popupElement.querySelector('#popup-name-field');
+  var inputPhonePopupElement = popupElement.querySelector('#popup-tel-field');
+  var textareaQuestionPopupElement = popupElement.querySelector('#popup-question-field');
   var inputCheckboxQuestionPopupElement = popupElement.querySelector('.popup__checkbox-field--js input');
 
   var callbackForm = document.querySelector('.callback form');
