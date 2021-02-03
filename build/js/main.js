@@ -34,13 +34,11 @@
     pageFooter.classList.remove('footer--nojs');
   }
 
-  if (footerTabs) {
+  if (footerTabs.length) {
     footerTabs.forEach(function (Tab, index) {
-      if (Tab) {
-        Tab.addEventListener('click', function () {
-          changeTabsStates(footerButtons[index]);
-        });
-      }
+      Tab.addEventListener('click', function () {
+        changeTabsStates(footerButtons[index]);
+      });
     });
   }
   // END: открывает / закрывает аккардион в подвале
