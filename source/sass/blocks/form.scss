@@ -10,17 +10,28 @@
 }
 
 .form--popup .form__field + .form__field {
-  margin-top: 30px;
+  margin-top: 32px;
 }
 
 .form--popup .form__field:nth-of-type(3n+2) {
   margin-left: 0;
 }
 
+.form--popup .form__field:nth-of-type(3n+3) {
+  min-height: 103px;
+}
+
 .form--popup .form__checkbox-field {
+  align-items: flex-start;
   margin-left: 0;
   width: auto;
   max-width: none;
+}
+
+.form--popup .form__checkbox-field span:first-of-type {
+  margin-top: 0;
+  margin-left: 15px;
+  padding-right: 5px;
 }
 
 .form__field {
@@ -56,7 +67,7 @@
 
 .form--popup textarea {
   padding: 14px 24px;
-  min-height: 107px;
+  // min-height: 107px;
 }
 
 .form__field textarea {
@@ -166,6 +177,10 @@
   max-width: 230px;
   margin-top: 38px;
   margin-left: 37px;
+}
+
+.form__checkbox-field span:first-of-type {
+  margin-top: 10px;
 }
 
 .form__submit-button {
