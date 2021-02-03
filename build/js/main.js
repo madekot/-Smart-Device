@@ -56,7 +56,7 @@
   var inputNamePopupElement = popupElement.querySelector('#popup-name-field');
   var inputPhonePopupElement = popupElement.querySelector('#popup-tel-field');
   var textareaQuestionPopupElement = popupElement.querySelector('#popup-question-field');
-  var inputCheckboxQuestionPopupElement = popupElement.querySelector('.popup__checkbox-field--js input');
+  var inputCheckboxQuestionPopupElement = popupElement.querySelector('#checkbox-field-2');
 
   var callbackForm = document.querySelector('.callback form');
   var inputNameFormElement = document.querySelector('#name-field');
