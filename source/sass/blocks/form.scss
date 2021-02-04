@@ -73,6 +73,12 @@
   // min-height: 107px;
 }
 
+.form--popup .popup__submit-button {
+  order: 5;
+  width: 100%;
+  margin-top: 30px;
+}
+
 .form__field textarea {
   resize: none;
 }
@@ -185,6 +191,12 @@
 
   min-width: 270px;
   margin-top: 45px;
+}
+
+.popup__submit-button {
+  order: 5;
+  width: 100%;
+  margin-top: 30px;
 }
 
 @media (max-width: 1023px) {
