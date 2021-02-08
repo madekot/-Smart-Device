@@ -34,13 +34,11 @@
     pageFooter.classList.remove('footer--nojs');
   }
 
-  if (footerTabs.length) {
-    footerTabs.forEach(function (Tab, index) {
-      Tab.addEventListener('click', function () {
-        changeTabsStates(footerButtons[index]);
-      });
+  footerTabs.forEach(function (tab, index) {
+    tab.addEventListener('click', function () {
+      changeTabsStates(footerButtons[index]);
     });
-  }
+  });
   // END: открывает / закрывает аккардион в подвале
 
   // START: открывает / закрывает модалку по клику или с клавиатуры
